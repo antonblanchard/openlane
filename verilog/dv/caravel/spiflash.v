@@ -104,6 +104,7 @@ module spiflash #(
 	initial begin
 		$display("Reading %s",  FILENAME);
 		$readmemh(FILENAME, memory);
+		$display("%s loaded into memory", FILENAME);
 	end
 
 	task spi_action;
