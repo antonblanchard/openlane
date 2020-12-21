@@ -185,7 +185,7 @@ module user_proj_example (
    assign io_out[27] = ob_pty;
 
    assign io_out[36:28] = 0; // don't care
-   assign io_oeb[36:28] = {9{1'b0}}; // input
+   assign io_oeb[36:28] = {9{1'b1}}; // input
    assign ib_data = io_in[35:28];
    assign ib_pty = io_in[36];
 
