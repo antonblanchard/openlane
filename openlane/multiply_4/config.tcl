@@ -9,6 +9,9 @@ set ::env(CLOCK_PORT) "clk"
 set ::env(CLOCK_PERIOD) "20"
 set ::env(CLOCK_NET) $::env(CLOCK_PORT)
 
+set ::env(FP_SIZING) absolute
+set ::env(DIE_AREA) "0 0 800 800"
+
 set ::env(DESIGN_IS_CORE) 0
 set ::env(FP_PDN_CORE_RING) 0
 set ::env(GLB_RT_MAXLAYER) 5
@@ -21,4 +24,4 @@ set ::env(CELL_PAD) 4
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
-set ::env(DIODE_INSERTION_STRATEGY) 2
+set ::env(ROUTING_CORES) 8
