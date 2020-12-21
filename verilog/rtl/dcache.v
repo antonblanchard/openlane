@@ -2238,28 +2238,28 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   assign _518_ = _514_ ? 1'h1 : cache_valids[1];
   assign _519_ = _515_ ? 1'h1 : cache_valids[2];
   assign _520_ = _516_ ? 1'h1 : cache_valids[3];
-  plru_1 \maybe_plrus.plrus:0.plru  (
+  plru_2 \maybe_plrus.plrus:0.plru  (
     .acc(_198_[0]),
     .acc_en(\maybe_plrus.plrus:0.plru_acc_en ),
     .clk(clk),
     .lru(\maybe_plrus.plrus:0.plru_out ),
     .rst(rst)
   );
-  plru_1 \maybe_plrus.plrus:1.plru  (
+  plru_2 \maybe_plrus.plrus:1.plru  (
     .acc(_198_[0]),
     .acc_en(\maybe_plrus.plrus:1.plru_acc_en ),
     .clk(clk),
     .lru(\maybe_plrus.plrus:1.plru_out ),
     .rst(rst)
   );
-  plru_1 \maybe_tlb_plrus.tlb_plrus:0.tlb_plru  (
+  plru_2 \maybe_tlb_plrus.tlb_plrus:0.tlb_plru  (
     .acc(_198_[5]),
     .acc_en(\maybe_tlb_plrus.tlb_plrus:0.tlb_plru_acc_en ),
     .clk(clk),
     .lru(\maybe_tlb_plrus.tlb_plrus:0.tlb_plru_out ),
     .rst(rst)
   );
-  plru_1 \maybe_tlb_plrus.tlb_plrus:1.tlb_plru  (
+  plru_2 \maybe_tlb_plrus.tlb_plrus:1.tlb_plru  (
     .acc(_198_[5]),
     .acc_en(\maybe_tlb_plrus.tlb_plrus:1.tlb_plru_acc_en ),
     .clk(clk),
