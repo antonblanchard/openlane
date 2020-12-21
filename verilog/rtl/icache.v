@@ -44,76 +44,76 @@ module cache_ram_4_64_1489f923c4dca729178b3e3233458550d8dddf29(clk, rd_en, rd_ad
   input [3:0] wr_addr;
   input [63:0] wr_data;
   input [7:0] wr_sel;
-  reg [7:0] \$mem$\20361  [15:0];
-  reg [7:0] \$mem$\20362  [15:0];
-  reg [7:0] \$mem$\20363  [15:0];
-  reg [7:0] \$mem$\20364  [15:0];
-  reg [7:0] \$mem$\20365  [15:0];
-  reg [7:0] \$mem$\20366  [15:0];
-  reg [7:0] \$mem$\20367  [15:0];
-  reg [7:0] \$mem$\20368  [15:0];
+  reg [7:0] \$mem$\20409  [15:0];
+  reg [7:0] \$mem$\20410  [15:0];
+  reg [7:0] \$mem$\20411  [15:0];
+  reg [7:0] \$mem$\20412  [15:0];
+  reg [7:0] \$mem$\20413  [15:0];
+  reg [7:0] \$mem$\20414  [15:0];
+  reg [7:0] \$mem$\20415  [15:0];
+  reg [7:0] \$mem$\20416  [15:0];
   (* ram_style = "block" *)
-  reg [7:0] \20361  [15:0];
+  reg [7:0] \20409  [15:0];
   reg [7:0] _16_;
   always @(posedge clk) begin
-    if (rd_en) _16_ <= \20361 [rd_addr];
-    if (wr_sel[0]) \20361 [wr_addr] <= wr_data[7:0];
+    if (rd_en) _16_ <= \20409 [rd_addr];
+    if (wr_sel[0]) \20409 [wr_addr] <= wr_data[7:0];
   end
   assign _01_ = _16_;
   (* ram_style = "block" *)
-  reg [7:0] \20362  [15:0];
+  reg [7:0] \20410  [15:0];
   reg [7:0] _17_;
   always @(posedge clk) begin
-    if (rd_en) _17_ <= \20362 [rd_addr];
-    if (wr_sel[1]) \20362 [wr_addr] <= wr_data[15:8];
+    if (rd_en) _17_ <= \20410 [rd_addr];
+    if (wr_sel[1]) \20410 [wr_addr] <= wr_data[15:8];
   end
   assign _03_ = _17_;
   (* ram_style = "block" *)
-  reg [7:0] \20363  [15:0];
+  reg [7:0] \20411  [15:0];
   reg [7:0] _18_;
   always @(posedge clk) begin
-    if (rd_en) _18_ <= \20363 [rd_addr];
-    if (wr_sel[2]) \20363 [wr_addr] <= wr_data[23:16];
+    if (rd_en) _18_ <= \20411 [rd_addr];
+    if (wr_sel[2]) \20411 [wr_addr] <= wr_data[23:16];
   end
   assign _05_ = _18_;
   (* ram_style = "block" *)
-  reg [7:0] \20364  [15:0];
+  reg [7:0] \20412  [15:0];
   reg [7:0] _19_;
   always @(posedge clk) begin
-    if (rd_en) _19_ <= \20364 [rd_addr];
-    if (wr_sel[3]) \20364 [wr_addr] <= wr_data[31:24];
+    if (rd_en) _19_ <= \20412 [rd_addr];
+    if (wr_sel[3]) \20412 [wr_addr] <= wr_data[31:24];
   end
   assign _07_ = _19_;
   (* ram_style = "block" *)
-  reg [7:0] \20365  [15:0];
+  reg [7:0] \20413  [15:0];
   reg [7:0] _20_;
   always @(posedge clk) begin
-    if (rd_en) _20_ <= \20365 [rd_addr];
-    if (wr_sel[4]) \20365 [wr_addr] <= wr_data[39:32];
+    if (rd_en) _20_ <= \20413 [rd_addr];
+    if (wr_sel[4]) \20413 [wr_addr] <= wr_data[39:32];
   end
   assign _09_ = _20_;
   (* ram_style = "block" *)
-  reg [7:0] \20366  [15:0];
+  reg [7:0] \20414  [15:0];
   reg [7:0] _21_;
   always @(posedge clk) begin
-    if (rd_en) _21_ <= \20366 [rd_addr];
-    if (wr_sel[5]) \20366 [wr_addr] <= wr_data[47:40];
+    if (rd_en) _21_ <= \20414 [rd_addr];
+    if (wr_sel[5]) \20414 [wr_addr] <= wr_data[47:40];
   end
   assign _11_ = _21_;
   (* ram_style = "block" *)
-  reg [7:0] \20367  [15:0];
+  reg [7:0] \20415  [15:0];
   reg [7:0] _22_;
   always @(posedge clk) begin
-    if (rd_en) _22_ <= \20367 [rd_addr];
-    if (wr_sel[6]) \20367 [wr_addr] <= wr_data[55:48];
+    if (rd_en) _22_ <= \20415 [rd_addr];
+    if (wr_sel[6]) \20415 [wr_addr] <= wr_data[55:48];
   end
   assign _13_ = _22_;
   (* ram_style = "block" *)
-  reg [7:0] \20368  [15:0];
+  reg [7:0] \20416  [15:0];
   reg [7:0] _23_;
   always @(posedge clk) begin
-    if (rd_en) _23_ <= \20368 [rd_addr];
-    if (wr_sel[7]) \20368 [wr_addr] <= wr_data[63:56];
+    if (rd_en) _23_ <= \20416 [rd_addr];
+    if (wr_sel[7]) \20416 [wr_addr] <= wr_data[63:56];
   end
   assign _15_ = _23_;
   assign rd_data = { _15_, _13_, _11_, _09_, _07_, _05_, _03_, _01_ };
@@ -275,9 +275,9 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   wire [199:0] _152_;
   wire [3:0] _153_;
   wire [33:0] _154_;
-  wire [63:0] _155_;
+  wire [71:0] _155_;
   wire [1:0] _156_;
-  wire [8:0] _157_;
+  wire _157_;
   wire [67:0] _158_;
   wire _159_;
   wire _160_;
@@ -397,6 +397,7 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   output [98:0] i_out;
   input inval_in;
   reg [3:0] itlb_valids;
+  output [53:0] log_out;
   input [130:0] m_in;
   wire \maybe_plrus.plrus:0.plru_acc_en ;
   wire \maybe_plrus.plrus:0.plru_out ;
@@ -424,20 +425,20 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   wire use_previous;
   input [65:0] wishbone_in;
   output [106:0] wishbone_out;
-  reg [63:0] \$mem$\8155  [3:0];
-  reg [49:0] \$mem$\8158  [3:0];
+  reg [63:0] \$mem$\8207  [3:0];
+  reg [49:0] \$mem$\8210  [3:0];
   (* ram_style = "distributed" *)
-  reg [63:0] \8155  [3:0];
+  reg [63:0] \8207  [3:0];
   always @(posedge clk) begin
-    if (_032_) \8155 [_017_] <= m_in[130:67];
+    if (_032_) \8207 [_017_] <= m_in[130:67];
   end
-  assign _169_ = \8155 [tlb_req_index];
+  assign _169_ = \8207 [tlb_req_index];
   (* ram_style = "distributed" *)
-  reg [49:0] \8158  [3:0];
+  reg [49:0] \8210  [3:0];
   always @(posedge clk) begin
-    if (_028_) \8158 [_017_] <= m_in[66:17];
+    if (_028_) \8210 [_017_] <= m_in[66:17];
   end
-  assign _171_ = \8158 [tlb_req_index];
+  assign _171_ = \8210 [tlb_req_index];
   assign _257_ = _012_[0] ? itlb_valids[1] : itlb_valids[0];
   assign _258_ = _041_[0] ? _167_[170] : _167_[169];
   assign _259_ = _041_[0] ? _167_[174] : _167_[173];
@@ -563,7 +564,7 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   assign _085_ = inval_in ? 1'h0 : _167_[165];
   assign _086_ = real_addr[5:3] - 3'h1;
   assign _087_ = req_is_miss ? { real_addr[31:3], 5'h01 } : _167_[33:0];
-  assign _088_ = req_is_miss ? 2'h3 : _167_[99:98];
+  assign _088_ = req_is_miss ? 2'h3 : _167_[107:106];
   assign _089_ = req_is_miss ? { _086_, 1'h1, i_in[3], real_addr[55:3], i_in[12] } : { _167_[168:166], _085_, _167_[164:110] };
   assign _090_ = _167_[1:0] == 2'h0;
   assign _091_ = _167_[1:0] == 2'h1;
@@ -580,12 +581,12 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   assign _102_ = _091_ ? { _215_, _214_, _213_, _212_ } : _084_;
   assign _103_ = _091_ ? 2'h2 : _167_[1:0];
   assign _104_ = _091_ ? replace_way : _167_[109];
-  assign _105_ = ~ _167_[99];
+  assign _105_ = ~ _167_[107];
   assign _106_ = ~ wishbone_in[65];
   assign _107_ = ~ _105_;
   assign _108_ = _106_ & _107_;
   assign _109_ = _167_[7:5] == _167_[168:166];
-  assign _110_ = _114_ ? 1'h0 : _167_[99];
+  assign _110_ = _114_ ? 1'h0 : _167_[107];
   assign _111_ = _115_ ? 1'h1 : _105_;
   assign _112_ = _167_[7:5] + 3'h1;
   assign _113_ = _108_ ? { _167_[33:8], _112_, _167_[4:2] } : _167_[33:2];
@@ -599,7 +600,7 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   assign _121_ = _167_[165] & _120_;
   assign _122_ = _126_ ? { _256_, _255_, _254_, _253_ } : _102_;
   assign _123_ = _127_ ? 2'h0 : _103_;
-  assign _124_ = _128_ ? 1'h0 : _167_[98];
+  assign _124_ = _128_ ? 1'h0 : _167_[106];
   assign _125_ = _167_[113:111] + 3'h1;
   assign _126_ = wishbone_in[64] & _118_;
   assign _127_ = wishbone_in[64] & _118_;
@@ -609,282 +610,282 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   assign _131_ = _167_[1:0] == 2'h1;
   assign _132_ = _167_[1:0] == 2'h2;
   assign _133_ = _131_ | _132_;
-  function [199:0] \8042 ;
+  function [199:0] \8094 ;
     input [199:0] a;
     input [399:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8042  = b[199:0];
+        \8094  = b[199:0];
       2'b1?:
-        \8042  = b[399:200];
+        \8094  = b[399:200];
       default:
-        \8042  = a;
+        \8094  = a;
     endcase
   endfunction
-  assign _134_ = \8042 (200'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, { _101_, cache_tags }, { _133_, _090_ });
-  function [3:0] \8044 ;
+  assign _134_ = \8094 (200'hxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, { _101_, cache_tags }, { _133_, _090_ });
+  function [3:0] \8096 ;
     input [3:0] a;
     input [7:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8044  = b[3:0];
+        \8096  = b[3:0];
       2'b1?:
-        \8044  = b[7:4];
+        \8096  = b[7:4];
       default:
-        \8044  = a;
+        \8096  = a;
     endcase
   endfunction
-  assign _135_ = \8044 (4'hx, { _122_, _084_ }, { _133_, _090_ });
-  function [1:0] \8047 ;
+  assign _135_ = \8096 (4'hx, { _122_, _084_ }, { _133_, _090_ });
+  function [1:0] \8099 ;
     input [1:0] a;
     input [3:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8047  = b[1:0];
+        \8099  = b[1:0];
       2'b1?:
-        \8047  = b[3:2];
+        \8099  = b[3:2];
       default:
-        \8047  = a;
+        \8099  = a;
     endcase
   endfunction
-  assign _136_ = \8047 (2'hx, { _123_, _087_[1:0] }, { _133_, _090_ });
-  function [31:0] \8050 ;
+  assign _136_ = \8099 (2'hx, { _123_, _087_[1:0] }, { _133_, _090_ });
+  function [31:0] \8102 ;
     input [31:0] a;
     input [63:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8050  = b[31:0];
+        \8102  = b[31:0];
       2'b1?:
-        \8050  = b[63:32];
+        \8102  = b[63:32];
       default:
-        \8050  = a;
+        \8102  = a;
     endcase
   endfunction
-  assign _137_ = \8050 (32'hxxxxxxxx, { _113_, _087_[33:2] }, { _133_, _090_ });
-  function [0:0] \8053 ;
+  assign _137_ = \8102 (32'hxxxxxxxx, { _113_, _087_[33:2] }, { _133_, _090_ });
+  function [0:0] \8105 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8053  = b[0:0];
+        \8105  = b[0:0];
       2'b1?:
-        \8053  = b[1:1];
+        \8105  = b[1:1];
       default:
-        \8053  = a;
+        \8105  = a;
     endcase
   endfunction
-  assign _138_ = \8053 (1'hx, { _124_, _088_[0] }, { _133_, _090_ });
-  function [0:0] \8056 ;
+  assign _138_ = \8105 (1'hx, { _124_, _088_[0] }, { _133_, _090_ });
+  function [0:0] \8108 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8056  = b[0:0];
+        \8108  = b[0:0];
       2'b1?:
-        \8056  = b[1:1];
+        \8108  = b[1:1];
       default:
-        \8056  = a;
+        \8108  = a;
     endcase
   endfunction
-  assign _139_ = \8056 (1'hx, { _110_, _088_[1] }, { _133_, _090_ });
-  function [0:0] \8059 ;
+  assign _139_ = \8108 (1'hx, { _110_, _088_[1] }, { _133_, _090_ });
+  function [0:0] \8111 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8059  = b[0:0];
+        \8111  = b[0:0];
       2'b1?:
-        \8059  = b[1:1];
+        \8111  = b[1:1];
       default:
-        \8059  = a;
+        \8111  = a;
     endcase
   endfunction
-  assign _140_ = \8059 (1'hx, { _104_, _167_[109] }, { _133_, _090_ });
-  function [0:0] \8063 ;
+  assign _140_ = \8111 (1'hx, { _104_, _167_[109] }, { _133_, _090_ });
+  function [0:0] \8115 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8063  = b[0:0];
+        \8115  = b[0:0];
       2'b1?:
-        \8063  = b[1:1];
+        \8115  = b[1:1];
       default:
-        \8063  = a;
+        \8115  = a;
     endcase
   endfunction
-  assign _141_ = \8063 (1'hx, { _167_[110], _089_[0] }, { _133_, _090_ });
-  function [3:0] \8066 ;
+  assign _141_ = \8115 (1'hx, { _167_[110], _089_[0] }, { _133_, _090_ });
+  function [3:0] \8118 ;
     input [3:0] a;
     input [7:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8066  = b[3:0];
+        \8118  = b[3:0];
       2'b1?:
-        \8066  = b[7:4];
+        \8118  = b[7:4];
       default:
-        \8066  = a;
+        \8118  = a;
     endcase
   endfunction
-  assign _142_ = \8066 (4'hx, { _129_, _089_[4:1] }, { _133_, _090_ });
-  function [53:0] \8072 ;
+  assign _142_ = \8118 (4'hx, { _129_, _089_[4:1] }, { _133_, _090_ });
+  function [53:0] \8124 ;
     input [53:0] a;
     input [107:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8072  = b[53:0];
+        \8124  = b[53:0];
       2'b1?:
-        \8072  = b[107:54];
+        \8124  = b[107:54];
       default:
-        \8072  = a;
+        \8124  = a;
     endcase
   endfunction
-  assign _143_ = \8072 (54'hxxxxxxxxxxxxxx, { _167_[168:166], _085_, _167_[164:115], _089_[58:5] }, { _133_, _090_ });
-  function [0:0] \8075 ;
+  assign _143_ = \8124 (54'hxxxxxxxxxxxxxx, { _167_[168:166], _085_, _167_[164:115], _089_[58:5] }, { _133_, _090_ });
+  function [0:0] \8127 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8075  = b[0:0];
+        \8127  = b[0:0];
       2'b1?:
-        \8075  = b[1:1];
+        \8127  = b[1:1];
       default:
-        \8075  = a;
+        \8127  = a;
     endcase
   endfunction
-  assign _144_ = \8075 (1'hx, { _130_[0], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8078 ;
+  assign _144_ = \8127 (1'hx, { _130_[0], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8130 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8078  = b[0:0];
+        \8130  = b[0:0];
       2'b1?:
-        \8078  = b[1:1];
+        \8130  = b[1:1];
       default:
-        \8078  = a;
+        \8130  = a;
     endcase
   endfunction
-  assign _145_ = \8078 (1'hx, { _130_[1], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8081 ;
+  assign _145_ = \8130 (1'hx, { _130_[1], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8133 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8081  = b[0:0];
+        \8133  = b[0:0];
       2'b1?:
-        \8081  = b[1:1];
+        \8133  = b[1:1];
       default:
-        \8081  = a;
+        \8133  = a;
     endcase
   endfunction
-  assign _146_ = \8081 (1'hx, { _130_[2], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8084 ;
+  assign _146_ = \8133 (1'hx, { _130_[2], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8136 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8084  = b[0:0];
+        \8136  = b[0:0];
       2'b1?:
-        \8084  = b[1:1];
+        \8136  = b[1:1];
       default:
-        \8084  = a;
+        \8136  = a;
     endcase
   endfunction
-  assign _147_ = \8084 (1'hx, { _130_[3], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8087 ;
+  assign _147_ = \8136 (1'hx, { _130_[3], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8139 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8087  = b[0:0];
+        \8139  = b[0:0];
       2'b1?:
-        \8087  = b[1:1];
+        \8139  = b[1:1];
       default:
-        \8087  = a;
+        \8139  = a;
     endcase
   endfunction
-  assign _148_ = \8087 (1'hx, { _130_[4], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8090 ;
+  assign _148_ = \8139 (1'hx, { _130_[4], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8142 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8090  = b[0:0];
+        \8142  = b[0:0];
       2'b1?:
-        \8090  = b[1:1];
+        \8142  = b[1:1];
       default:
-        \8090  = a;
+        \8142  = a;
     endcase
   endfunction
-  assign _149_ = \8090 (1'hx, { _130_[5], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8093 ;
+  assign _149_ = \8142 (1'hx, { _130_[5], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8145 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8093  = b[0:0];
+        \8145  = b[0:0];
       2'b1?:
-        \8093  = b[1:1];
+        \8145  = b[1:1];
       default:
-        \8093  = a;
+        \8145  = a;
     endcase
   endfunction
-  assign _150_ = \8093 (1'hx, { _130_[6], 1'h0 }, { _133_, _090_ });
-  function [0:0] \8096 ;
+  assign _150_ = \8145 (1'hx, { _130_[6], 1'h0 }, { _133_, _090_ });
+  function [0:0] \8148 ;
     input [0:0] a;
     input [1:0] b;
     input [1:0] s;
     (* parallel_case *)
     casez (s)
       2'b?1:
-        \8096  = b[0:0];
+        \8148  = b[0:0];
       2'b1?:
-        \8096  = b[1:1];
+        \8148  = b[1:1];
       default:
-        \8096  = a;
+        \8148  = a;
     endcase
   endfunction
-  assign _151_ = \8096 (1'hx, { _130_[7], 1'h0 }, { _133_, _090_ });
+  assign _151_ = \8148 (1'hx, { _130_[7], 1'h0 }, { _133_, _090_ });
   assign _152_ = rst ? cache_tags : _134_;
   assign _153_ = rst ? 4'h0 : _135_;
   assign _154_ = rst ? 34'h000000000 : { _137_, _136_ };
-  assign _155_ = rst ? 64'h0000000000000000 : _167_[97:34];
+  assign _155_ = rst ? 72'hff0000000000000000 : _167_[105:34];
   assign _156_ = rst ? 2'h0 : { _139_, _138_ };
-  assign _157_ = rst ? 9'h0ff : _167_[108:100];
+  assign _157_ = rst ? 1'h0 : _167_[108];
   assign _158_ = rst ? _167_[176:109] : { _151_, _150_, _149_, _148_, _147_, _146_, _145_, _144_, _143_, _142_, _141_, _140_ };
   assign _159_ = rst | flush_in;
   assign _160_ = _159_ | m_in[0];

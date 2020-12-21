@@ -45,76 +45,76 @@ module cache_ram_4_64_3f29546453678b855931c174a97d6c0894b8f546(clk, rd_en, rd_ad
   input [3:0] wr_addr;
   input [63:0] wr_data;
   input [7:0] wr_sel;
-  reg [7:0] \$mem$\25463  [15:0];
-  reg [7:0] \$mem$\25464  [15:0];
-  reg [7:0] \$mem$\25465  [15:0];
-  reg [7:0] \$mem$\25466  [15:0];
-  reg [7:0] \$mem$\25467  [15:0];
-  reg [7:0] \$mem$\25468  [15:0];
-  reg [7:0] \$mem$\25469  [15:0];
-  reg [7:0] \$mem$\25470  [15:0];
+  reg [7:0] \$mem$\25511  [15:0];
+  reg [7:0] \$mem$\25512  [15:0];
+  reg [7:0] \$mem$\25513  [15:0];
+  reg [7:0] \$mem$\25514  [15:0];
+  reg [7:0] \$mem$\25515  [15:0];
+  reg [7:0] \$mem$\25516  [15:0];
+  reg [7:0] \$mem$\25517  [15:0];
+  reg [7:0] \$mem$\25518  [15:0];
   (* ram_style = "block" *)
-  reg [7:0] \25463  [15:0];
+  reg [7:0] \25511  [15:0];
   reg [7:0] _17_;
   always @(posedge clk) begin
-    if (rd_en) _17_ <= \25463 [rd_addr];
-    if (wr_sel[0]) \25463 [wr_addr] <= wr_data[7:0];
+    if (rd_en) _17_ <= \25511 [rd_addr];
+    if (wr_sel[0]) \25511 [wr_addr] <= wr_data[7:0];
   end
   assign _02_ = _17_;
   (* ram_style = "block" *)
-  reg [7:0] \25464  [15:0];
+  reg [7:0] \25512  [15:0];
   reg [7:0] _18_;
   always @(posedge clk) begin
-    if (rd_en) _18_ <= \25464 [rd_addr];
-    if (wr_sel[1]) \25464 [wr_addr] <= wr_data[15:8];
+    if (rd_en) _18_ <= \25512 [rd_addr];
+    if (wr_sel[1]) \25512 [wr_addr] <= wr_data[15:8];
   end
   assign _04_ = _18_;
   (* ram_style = "block" *)
-  reg [7:0] \25465  [15:0];
+  reg [7:0] \25513  [15:0];
   reg [7:0] _19_;
   always @(posedge clk) begin
-    if (rd_en) _19_ <= \25465 [rd_addr];
-    if (wr_sel[2]) \25465 [wr_addr] <= wr_data[23:16];
+    if (rd_en) _19_ <= \25513 [rd_addr];
+    if (wr_sel[2]) \25513 [wr_addr] <= wr_data[23:16];
   end
   assign _06_ = _19_;
   (* ram_style = "block" *)
-  reg [7:0] \25466  [15:0];
+  reg [7:0] \25514  [15:0];
   reg [7:0] _20_;
   always @(posedge clk) begin
-    if (rd_en) _20_ <= \25466 [rd_addr];
-    if (wr_sel[3]) \25466 [wr_addr] <= wr_data[31:24];
+    if (rd_en) _20_ <= \25514 [rd_addr];
+    if (wr_sel[3]) \25514 [wr_addr] <= wr_data[31:24];
   end
   assign _08_ = _20_;
   (* ram_style = "block" *)
-  reg [7:0] \25467  [15:0];
+  reg [7:0] \25515  [15:0];
   reg [7:0] _21_;
   always @(posedge clk) begin
-    if (rd_en) _21_ <= \25467 [rd_addr];
-    if (wr_sel[4]) \25467 [wr_addr] <= wr_data[39:32];
+    if (rd_en) _21_ <= \25515 [rd_addr];
+    if (wr_sel[4]) \25515 [wr_addr] <= wr_data[39:32];
   end
   assign _10_ = _21_;
   (* ram_style = "block" *)
-  reg [7:0] \25468  [15:0];
+  reg [7:0] \25516  [15:0];
   reg [7:0] _22_;
   always @(posedge clk) begin
-    if (rd_en) _22_ <= \25468 [rd_addr];
-    if (wr_sel[5]) \25468 [wr_addr] <= wr_data[47:40];
+    if (rd_en) _22_ <= \25516 [rd_addr];
+    if (wr_sel[5]) \25516 [wr_addr] <= wr_data[47:40];
   end
   assign _12_ = _22_;
   (* ram_style = "block" *)
-  reg [7:0] \25469  [15:0];
+  reg [7:0] \25517  [15:0];
   reg [7:0] _23_;
   always @(posedge clk) begin
-    if (rd_en) _23_ <= \25469 [rd_addr];
-    if (wr_sel[6]) \25469 [wr_addr] <= wr_data[55:48];
+    if (rd_en) _23_ <= \25517 [rd_addr];
+    if (wr_sel[6]) \25517 [wr_addr] <= wr_data[55:48];
   end
   assign _14_ = _23_;
   (* ram_style = "block" *)
-  reg [7:0] \25470  [15:0];
+  reg [7:0] \25518  [15:0];
   reg [7:0] _24_;
   always @(posedge clk) begin
-    if (rd_en) _24_ <= \25470 [rd_addr];
-    if (wr_sel[7]) \25470 [wr_addr] <= wr_data[63:56];
+    if (rd_en) _24_ <= \25518 [rd_addr];
+    if (wr_sel[7]) \25518 [wr_addr] <= wr_data[63:56];
   end
   assign _16_ = _24_;
   always @(posedge clk)
@@ -152,15 +152,15 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _026_;
   wire _027_;
   wire _028_;
-  wire [3:0] _029_;
+  wire _029_;
   wire _030_;
-  wire _031_;
+  wire [3:0] _031_;
   wire _032_;
-  wire [3:0] _033_;
-  wire [3:0] _034_;
+  wire _033_;
+  wire _034_;
   wire [3:0] _035_;
-  wire _036_;
-  wire _037_;
+  wire [3:0] _036_;
+  wire [3:0] _037_;
   wire _038_;
   wire _039_;
   wire _040_;
@@ -231,9 +231,9 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _105_;
   wire _106_;
   wire _107_;
-  wire [2:0] _108_;
+  wire _108_;
   wire _109_;
-  wire _110_;
+  wire [2:0] _110_;
   wire _111_;
   wire _112_;
   wire _113_;
@@ -257,51 +257,51 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _131_;
   wire _132_;
   wire _133_;
-  wire [2:0] _134_;
-  wire [2:0] _135_;
-  wire [2:0] _136_;
-  wire _137_;
-  wire [3:0] _138_;
-  wire _139_;
+  wire _134_;
+  wire _135_;
+  wire _136_;
+  wire [2:0] _137_;
+  wire [2:0] _138_;
+  wire [2:0] _139_;
   wire _140_;
-  wire _141_;
+  wire [3:0] _141_;
   wire _142_;
   wire _143_;
   wire _144_;
   wire _145_;
   wire _146_;
   wire _147_;
-  wire [58:0] _148_;
+  wire _148_;
   wire _149_;
-  wire [57:0] _150_;
+  wire _150_;
   wire [58:0] _151_;
   wire _152_;
   wire [57:0] _153_;
-  wire [63:0] _154_;
+  wire [58:0] _154_;
   wire _155_;
-  wire [7:0] _156_;
-  wire [7:0] _157_;
-  wire [7:0] _158_;
+  wire [57:0] _156_;
+  wire [63:0] _157_;
+  wire _158_;
   wire [7:0] _159_;
   wire [7:0] _160_;
   wire [7:0] _161_;
   wire [7:0] _162_;
   wire [7:0] _163_;
-  wire _164_;
-  wire _165_;
-  wire _166_;
-  wire [63:0] _167_;
+  wire [7:0] _164_;
+  wire [7:0] _165_;
+  wire [7:0] _166_;
+  wire _167_;
   wire _168_;
   wire _169_;
-  wire _170_;
+  wire [63:0] _170_;
   wire _171_;
   wire _172_;
   wire _173_;
   wire _174_;
-  wire [63:0] _175_;
+  wire _175_;
   wire _176_;
   wire _177_;
-  wire _178_;
+  wire [63:0] _178_;
   wire _179_;
   wire _180_;
   wire _181_;
@@ -313,21 +313,21 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _187_;
   wire _188_;
   wire _189_;
-  wire [1:0] _190_;
+  wire _190_;
   wire _191_;
   wire _192_;
-  wire _193_;
-  reg _194_;
-  reg [6:0] _195_;
-  reg _196_;
-  reg [2:0] _197_;
-  wire [7:0] _198_;
-  wire [7:0] _199_;
-  wire [63:0] _200_;
-  wire [63:0] _201_;
-  wire _202_;
-  wire _203_;
-  wire _204_;
+  wire [1:0] _193_;
+  wire _194_;
+  wire _195_;
+  wire _196_;
+  reg _197_;
+  reg [6:0] _198_;
+  reg _199_;
+  reg [2:0] _200_;
+  wire [7:0] _201_;
+  wire [7:0] _202_;
+  wire [63:0] _203_;
+  wire [63:0] _204_;
   wire _205_;
   wire _206_;
   wire _207_;
@@ -340,25 +340,25 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _214_;
   wire _215_;
   wire _216_;
-  wire [63:0] _217_;
+  wire _217_;
   wire _218_;
   wire _219_;
-  wire _220_;
-  wire [7:0] _221_;
+  wire [63:0] _220_;
+  wire _221_;
   wire _222_;
   wire _223_;
-  wire _224_;
+  wire [7:0] _224_;
   wire _225_;
   wire _226_;
   wire _227_;
   wire _228_;
   wire _229_;
   wire _230_;
-  wire [135:0] _231_;
-  wire [2:0] _232_;
+  wire _231_;
+  wire _232_;
   wire _233_;
-  wire _234_;
-  wire _235_;
+  wire [135:0] _234_;
+  wire [2:0] _235_;
   wire _236_;
   wire _237_;
   wire _238_;
@@ -370,31 +370,31 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _244_;
   wire _245_;
   wire _246_;
-  wire [1:0] _247_;
+  wire _247_;
   wire _248_;
   wire _249_;
-  wire _250_;
-  wire [2:0] _251_;
+  wire [1:0] _250_;
+  wire _251_;
   wire _252_;
   wire _253_;
-  wire _254_;
+  wire [2:0] _254_;
   wire _255_;
   wire _256_;
   wire _257_;
   wire _258_;
   wire _259_;
   wire _260_;
-  wire [1:0] _261_;
+  wire _261_;
   wire _262_;
   wire _263_;
-  wire _264_;
+  wire [1:0] _264_;
   wire _265_;
   wire _266_;
   wire _267_;
-  wire [2:0] _268_;
+  wire _268_;
   wire _269_;
   wire _270_;
-  wire _271_;
+  wire [2:0] _271_;
   wire _272_;
   wire _273_;
   wire _274_;
@@ -402,14 +402,14 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _276_;
   wire _277_;
   wire _278_;
-  wire [2:0] _279_;
-  wire [31:0] _280_;
+  wire _279_;
+  wire _280_;
   wire _281_;
-  wire _282_;
-  wire [2:0] _283_;
+  wire [2:0] _282_;
+  wire [31:0] _283_;
   wire _284_;
   wire _285_;
-  wire _286_;
+  wire [2:0] _286_;
   wire _287_;
   wire _288_;
   wire _289_;
@@ -420,39 +420,39 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _294_;
   wire _295_;
   wire _296_;
-  wire [8:0] _297_;
+  wire _297_;
   wire _298_;
   wire _299_;
-  wire _300_;
+  wire [8:0] _300_;
   wire _301_;
   wire _302_;
   wire _303_;
-  wire [3:0] _304_;
-  wire [1:0] _305_;
+  wire _304_;
+  wire _305_;
   wire _306_;
-  wire [2:0] _307_;
-  wire _308_;
+  wire [3:0] _307_;
+  wire [1:0] _308_;
   wire _309_;
-  wire [10:0] _310_;
+  wire [2:0] _310_;
   wire _311_;
   wire _312_;
-  wire [3:0] _313_;
-  wire [7:0] _314_;
+  wire [10:0] _313_;
+  wire _314_;
   wire _315_;
-  wire _316_;
-  wire _317_;
+  wire [3:0] _316_;
+  wire [7:0] _317_;
   wire _318_;
   wire _319_;
-  wire [2:0] _320_;
-  wire [2:0] _321_;
-  wire [2:0] _322_;
+  wire _320_;
+  wire _321_;
+  wire _322_;
   wire [2:0] _323_;
-  wire _324_;
-  wire [6:0] _325_;
-  wire [63:0] _326_;
-  wire [7:0] _327_;
-  wire _328_;
-  wire _329_;
+  wire [2:0] _324_;
+  wire [2:0] _325_;
+  wire [2:0] _326_;
+  wire _327_;
+  wire [6:0] _328_;
+  wire [71:0] _329_;
   wire _330_;
   wire _331_;
   wire _332_;
@@ -468,21 +468,21 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire _342_;
   wire _343_;
   wire _344_;
-  wire [7:0] _345_;
+  wire _345_;
   wire _346_;
-  wire _347_;
+  wire [7:0] _347_;
   wire _348_;
   wire _349_;
   wire _350_;
   wire _351_;
-  wire [1:0] _352_;
+  wire _352_;
   wire _353_;
-  wire [1:0] _354_;
-  wire _355_;
-  wire _356_;
-  wire [1:0] _357_;
-  wire _358_;
-  wire [7:0] _359_;
+  wire _354_;
+  wire [1:0] _355_;
+  wire [1:0] _356_;
+  wire _357_;
+  wire [1:0] _358_;
+  wire _359_;
   wire _360_;
   wire _361_;
   wire _362_;
@@ -512,9 +512,9 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire [6:0] _386_;
   wire [24:0] _387_;
   wire [63:0] _388_;
-  wire _389_;
+  wire [7:0] _389_;
   wire _390_;
-  wire [7:0] _391_;
+  wire _391_;
   wire _392_;
   wire [48:0] _393_;
   wire _394_;
@@ -547,9 +547,9 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire [1:0] _421_;
   wire [2:0] _422_;
   wire [32:0] _423_;
-  wire [63:0] _424_;
+  wire [71:0] _424_;
   wire [1:0] _425_;
-  wire [79:0] _426_;
+  wire [71:0] _426_;
   wire _427_;
   wire _428_;
   wire [4:0] _429_;
@@ -657,6 +657,7 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   output [67:0] d_out;
   reg [3:0] dtlb_valids;
   wire [3:0] early_req_row;
+  output [19:0] log_out;
   input [131:0] m_in;
   output [66:0] m_out;
   wire \maybe_plrus.plrus:0.plru_acc_en ;
@@ -707,48 +708,48 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   wire valid_ra;
   input [65:0] wishbone_in;
   output [106:0] wishbone_out;
-  reg [101:0] \$mem$\19309  [1:0];
-  reg [127:0] \$mem$\19312  [1:0];
-  reg [55:0] \$mem$\19315  [1:0];
-  reg [55:0] \$mem$\19316  [1:0];
+  reg [101:0] \$mem$\19357  [1:0];
+  reg [127:0] \$mem$\19360  [1:0];
+  reg [55:0] \$mem$\19363  [1:0];
+  reg [55:0] \$mem$\19364  [1:0];
   (* ram_style = "distributed" *)
-  reg [101:0] \19309  [1:0];
+  reg [101:0] \19357  [1:0];
   reg [101:0] _531_;
   always @(posedge clk) begin
-    if (_012_) _531_ <= \19309 [_011_];
-    if (_039_) \19309 [r0[19]] <= { _460_, _459_ };
+    if (_012_) _531_ <= \19357 [_011_];
+    if (_041_) \19357 [r0[19]] <= { _460_, _459_ };
   end
   assign tlb_tag_way = _531_;
   (* ram_style = "distributed" *)
-  reg [127:0] \19312  [1:0];
+  reg [127:0] \19360  [1:0];
   reg [127:0] _532_;
   always @(posedge clk) begin
-    if (_012_) _532_ <= \19312 [_011_];
-    if (_043_) \19312 [r0[19]] <= { _463_, _462_ };
+    if (_012_) _532_ <= \19360 [_011_];
+    if (_045_) \19360 [r0[19]] <= { _463_, _462_ };
   end
   assign tlb_pte_way = _532_;
   (* ram_style = "distributed" *)
-  reg [55:0] \19315  [1:0];
+  reg [55:0] \19363  [1:0];
   reg [55:0] _533_;
   always @(posedge clk) begin
-    _533_ <= \19315 [_047_];
-    if (_434_) \19315 [_437_[318]] <= { 7'h00, _437_[312:264] };
+    _533_ <= \19363 [_049_];
+    if (_434_) \19363 [_437_[318]] <= { 7'h00, _437_[312:264] };
   end
   assign _442_ = _533_;
   (* ram_style = "distributed" *)
-  reg [55:0] \19316  [1:0];
+  reg [55:0] \19364  [1:0];
   reg [55:0] _534_;
   always @(posedge clk) begin
-    _534_ <= \19316 [_047_];
-    if (_433_) \19316 [_437_[318]] <= { 7'h00, _437_[312:264] };
+    _534_ <= \19364 [_049_];
+    if (_433_) \19364 [_437_[318]] <= { 7'h00, _437_[312:264] };
   end
   assign _444_ = _534_;
-  assign _521_ = _108_[0] ? _437_[323] : _437_[322];
-  assign _522_ = _108_[0] ? _437_[327] : _437_[326];
-  assign _523_ = _108_[0] ? _437_[325] : _437_[324];
-  assign _524_ = _108_[0] ? _437_[329] : _437_[328];
-  assign _483_ = _108_[1] ? _523_ : _521_;
-  assign _484_ = _108_[1] ? _524_ : _522_;
+  assign _521_ = _110_[0] ? _437_[323] : _437_[322];
+  assign _522_ = _110_[0] ? _437_[327] : _437_[326];
+  assign _523_ = _110_[0] ? _437_[325] : _437_[324];
+  assign _524_ = _110_[0] ? _437_[329] : _437_[328];
+  assign _483_ = _110_[1] ? _523_ : _521_;
+  assign _484_ = _110_[1] ? _524_ : _522_;
   assign _000_ = m_in[1] | m_in[3];
   assign _001_ = ~ _000_;
   assign _002_ = m_in[0] ? { 1'h1, m_in[3:1], 8'hff, m_in[131:4], 5'h10, _001_, 1'h1 } : { 4'h0, d_in };
@@ -772,10 +773,10 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   assign _014_ = _012_ ? _445_ : tlb_valid_way;
   always @(posedge clk)
     tlb_valid_way <= _014_;
-  assign _015_ = { 31'h00000000, _195_[6] } == 32'd0;
-  assign \maybe_tlb_plrus.tlb_plrus:0.tlb_plru_acc_en  = _015_ ? _195_[4] : 1'h0;
-  assign _016_ = { 31'h00000000, _195_[6] } == 32'd1;
-  assign \maybe_tlb_plrus.tlb_plrus:1.tlb_plru_acc_en  = _016_ ? _195_[4] : 1'h0;
+  assign _015_ = { 31'h00000000, _198_[6] } == 32'd0;
+  assign \maybe_tlb_plrus.tlb_plrus:0.tlb_plru_acc_en  = _015_ ? _198_[4] : 1'h0;
+  assign _016_ = { 31'h00000000, _198_[6] } == 32'd1;
+  assign \maybe_tlb_plrus.tlb_plrus:1.tlb_plru_acc_en  = _016_ ? _198_[4] : 1'h0;
   assign _017_ = tlb_tag_way[50:0] == r0[70:20];
   assign _018_ = tlb_valid_way[0] & _017_;
   assign _019_ = _018_ ? 1'h1 : 1'h0;
@@ -783,954 +784,725 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   assign _021_ = tlb_valid_way[1] & _020_;
   assign tlb_hit_way = _021_ ? 1'h1 : 1'h0;
   assign _022_ = _021_ ? 1'h1 : _019_;
-  assign tlb_hit = _022_ & r0_valid;
+  assign _023_ = _022_ & r0_valid;
+  assign tlb_hit = _023_ & r0[5];
   assign pte = tlb_hit ? _446_ : 64'h0000000000000000;
-  assign _023_ = ~ r0[5];
-  assign valid_ra = tlb_hit | _023_;
-  assign ra = r0[5] ? { pte[55:12], r0[18:10], 3'h0 } : { r0[62:10], 3'h0 };
-  assign perm_attr = r0[5] ? { pte[1], pte[2], pte[3], pte[5], pte[7], pte[8] } : 6'h3b;
-  assign _024_ = r0_valid & r0[143];
-  assign _025_ = r0_valid & r0[145];
-  assign _026_ = _024_ & r0[144];
-  assign _027_ = rst | _026_;
-  assign _028_ = 1'h1 - r0[19];
-  assign _029_ = tlb_hit ? { _456_, _455_, _454_, _453_ } : dtlb_valids;
+  assign _024_ = ~ r0[5];
+  assign _025_ = r0_valid & _024_;
+  assign valid_ra = tlb_hit | _025_;
+  assign ra = tlb_hit ? { pte[55:12], r0[18:10], 3'h0 } : { r0[62:10], 3'h0 };
+  assign perm_attr = tlb_hit ? { pte[1], pte[2], pte[3], pte[5], pte[7], pte[8] } : 6'h3b;
+  assign _026_ = r0_valid & r0[143];
+  assign _027_ = r0_valid & r0[145];
+  assign _028_ = _026_ & r0[144];
+  assign _029_ = rst | _028_;
   assign _030_ = 1'h1 - r0[19];
-  assign _031_ = tlb_hit ? tlb_hit_way : _457_;
+  assign _031_ = tlb_hit ? { _456_, _455_, _454_, _453_ } : dtlb_valids;
   assign _032_ = 1'h1 - r0[19];
-  assign _033_ = _025_ ? { _473_, _472_, _471_, _470_ } : dtlb_valids;
-  assign _034_ = _024_ ? _029_ : _033_;
-  assign _035_ = _027_ ? 4'h0 : _034_;
+  assign _033_ = tlb_hit ? tlb_hit_way : _457_;
+  assign _034_ = 1'h1 - r0[19];
+  assign _035_ = _027_ ? { _473_, _472_, _471_, _470_ } : dtlb_valids;
+  assign _036_ = _026_ ? _031_ : _035_;
+  assign _037_ = _029_ ? 4'h0 : _036_;
   always @(posedge clk)
-    dtlb_valids <= _035_;
-  assign _036_ = ~ _027_;
-  assign _037_ = ~ _024_;
-  assign _038_ = _036_ & _037_;
-  assign _039_ = _038_ & _025_;
-  assign _040_ = ~ _027_;
-  assign _041_ = ~ _024_;
-  assign _042_ = _040_ & _041_;
-  assign _043_ = _042_ & _025_;
-  assign _044_ = { 31'h00000000, _195_[2] } == 32'd0;
-  assign \maybe_plrus.plrus:0.plru_acc_en  = _044_ ? _195_[3] : 1'h0;
-  assign _045_ = { 31'h00000000, _195_[2] } == 32'd1;
-  assign \maybe_plrus.plrus:1.plru_acc_en  = _045_ ? _195_[3] : 1'h0;
-  assign _046_ = m_in[0] ? m_in[10] : d_in[13];
-  assign _047_ = r0_stall ? r0[13] : _046_;
-  assign _048_ = r0[143] | r0[145];
-  assign _049_ = ~ _048_;
-  assign _050_ = r0_valid & _049_;
-  assign _051_ = ~ _196_;
-  assign req_go = _050_ & _051_;
-  assign _052_ = 1'h1 - r0[13];
-  assign _053_ = req_go & _474_;
-  assign _054_ = _442_[48:0] == { tlb_pte_way[55:12], r0[18:14] };
-  assign _055_ = _053_ & _054_;
-  assign _056_ = _055_ & tlb_valid_way[0];
-  assign _057_ = _056_ ? 1'h1 : 1'h0;
-  assign _058_ = _056_ ? 1'h0 : 1'h0;
-  assign _059_ = 1'h1 - r0[13];
-  assign _060_ = req_go & _475_;
-  assign _061_ = _444_[48:0] == { tlb_pte_way[55:12], r0[18:14] };
-  assign _062_ = _060_ & _061_;
-  assign _063_ = _062_ & tlb_valid_way[0];
-  assign _064_ = _063_ ? 1'h1 : _057_;
-  assign _065_ = _063_ ? 1'h1 : _058_;
-  assign _066_ = { tlb_pte_way[55:12], r0[18:14] } == _437_[312:264];
-  assign _067_ = _066_ ? 1'h1 : 1'h0;
-  assign _068_ = 1'h1 - r0[13];
-  assign _069_ = req_go & _476_;
-  assign _070_ = _442_[48:0] == { tlb_pte_way[119:76], r0[18:14] };
-  assign _071_ = _069_ & _070_;
-  assign _072_ = _071_ & tlb_valid_way[1];
-  assign _073_ = _072_ ? 1'h1 : 1'h0;
-  assign _074_ = _072_ ? 1'h0 : 1'h0;
-  assign _075_ = 1'h1 - r0[13];
-  assign _076_ = req_go & _477_;
-  assign _077_ = _444_[48:0] == { tlb_pte_way[119:76], r0[18:14] };
-  assign _078_ = _076_ & _077_;
-  assign _079_ = _078_ & tlb_valid_way[1];
-  assign _080_ = _079_ ? 1'h1 : _073_;
-  assign _081_ = _079_ ? 1'h1 : _074_;
-  assign _082_ = { tlb_pte_way[119:76], r0[18:14] } == _437_[312:264];
-  assign _083_ = _082_ ? 1'h1 : 1'h0;
-  assign _084_ = 1'h1 - tlb_hit_way;
-  assign _085_ = tlb_hit ? _478_ : 1'h0;
-  assign _086_ = tlb_hit ? _479_ : 1'h0;
-  assign _087_ = tlb_hit ? _480_ : 1'h0;
-  assign _088_ = 1'h1 - r0[13];
-  assign _089_ = req_go & _481_;
-  assign _090_ = _442_[48:0] == r0[62:14];
-  assign _091_ = _089_ & _090_;
-  assign _092_ = _091_ ? 1'h1 : 1'h0;
-  assign _093_ = 1'h1 - r0[13];
-  assign _094_ = req_go & _482_;
-  assign _095_ = _444_[48:0] == r0[62:14];
-  assign _096_ = _094_ & _095_;
-  assign _097_ = _096_ ? 1'h1 : _092_;
-  assign _098_ = _096_ ? 1'h1 : 1'h0;
-  assign _099_ = r0[62:14] == _437_[312:264];
-  assign _100_ = _099_ ? 1'h1 : 1'h0;
-  assign _101_ = r0[5] ? _085_ : _097_;
-  assign _102_ = r0[5] ? _086_ : _098_;
-  assign req_same_tag = r0[5] ? _087_ : _100_;
-  assign _103_ = _437_[152:151] == 2'h1;
-  assign _104_ = { 31'h00000000, r0[13] } == { 31'h00000000, _437_[318] };
-  assign _105_ = _103_ & _104_;
-  assign _106_ = _105_ & req_same_tag;
-  assign _107_ = ~ r0[1];
-  assign _108_ = 3'h7 - r0[12:10];
-  assign _109_ = _107_ | _485_;
-  assign _110_ = _106_ ? _109_ : _101_;
-  assign req_hit_way = _106_ ? replace_way : _102_;
-  assign _111_ = { 28'h0000000, _436_[11:8] } == { 28'h0000000, r0[13:10] };
-  assign _112_ = { 31'h00000000, _436_[133] } == { 31'h00000000, req_hit_way };
-  assign _113_ = _111_ & _112_;
-  assign use_forward1_next = _113_ ? _437_[154] : 1'h0;
-  assign _114_ = { 28'h0000000, _437_[141:138] } == { 28'h0000000, r0[13:10] };
-  assign _115_ = { 31'h00000000, _437_[137] } == { 31'h00000000, req_hit_way };
-  assign _116_ = _114_ & _115_;
-  assign use_forward2_next = _116_ ? _437_[136] : 1'h0;
-  assign _117_ = 1'h1 - _437_[318];
+    dtlb_valids <= _037_;
+  assign _038_ = ~ _029_;
+  assign _039_ = ~ _026_;
+  assign _040_ = _038_ & _039_;
+  assign _041_ = _040_ & _027_;
+  assign _042_ = ~ _029_;
+  assign _043_ = ~ _026_;
+  assign _044_ = _042_ & _043_;
+  assign _045_ = _044_ & _027_;
+  assign _046_ = { 31'h00000000, _198_[2] } == 32'd0;
+  assign \maybe_plrus.plrus:0.plru_acc_en  = _046_ ? _198_[3] : 1'h0;
+  assign _047_ = { 31'h00000000, _198_[2] } == 32'd1;
+  assign \maybe_plrus.plrus:1.plru_acc_en  = _047_ ? _198_[3] : 1'h0;
+  assign _048_ = m_in[0] ? m_in[10] : d_in[13];
+  assign _049_ = r0_stall ? r0[13] : _048_;
+  assign _050_ = r0[143] | r0[145];
+  assign _051_ = ~ _050_;
+  assign _052_ = r0_valid & _051_;
+  assign _053_ = ~ _199_;
+  assign req_go = _052_ & _053_;
+  assign _054_ = 1'h1 - r0[13];
+  assign _055_ = req_go & _474_;
+  assign _056_ = _442_[48:0] == { tlb_pte_way[55:12], r0[18:14] };
+  assign _057_ = _055_ & _056_;
+  assign _058_ = _057_ & tlb_valid_way[0];
+  assign _059_ = _058_ ? 1'h1 : 1'h0;
+  assign _060_ = _058_ ? 1'h0 : 1'h0;
+  assign _061_ = 1'h1 - r0[13];
+  assign _062_ = req_go & _475_;
+  assign _063_ = _444_[48:0] == { tlb_pte_way[55:12], r0[18:14] };
+  assign _064_ = _062_ & _063_;
+  assign _065_ = _064_ & tlb_valid_way[0];
+  assign _066_ = _065_ ? 1'h1 : _059_;
+  assign _067_ = _065_ ? 1'h1 : _060_;
+  assign _068_ = { tlb_pte_way[55:12], r0[18:14] } == _437_[312:264];
+  assign _069_ = _068_ ? 1'h1 : 1'h0;
+  assign _070_ = 1'h1 - r0[13];
+  assign _071_ = req_go & _476_;
+  assign _072_ = _442_[48:0] == { tlb_pte_way[119:76], r0[18:14] };
+  assign _073_ = _071_ & _072_;
+  assign _074_ = _073_ & tlb_valid_way[1];
+  assign _075_ = _074_ ? 1'h1 : 1'h0;
+  assign _076_ = _074_ ? 1'h0 : 1'h0;
+  assign _077_ = 1'h1 - r0[13];
+  assign _078_ = req_go & _477_;
+  assign _079_ = _444_[48:0] == { tlb_pte_way[119:76], r0[18:14] };
+  assign _080_ = _078_ & _079_;
+  assign _081_ = _080_ & tlb_valid_way[1];
+  assign _082_ = _081_ ? 1'h1 : _075_;
+  assign _083_ = _081_ ? 1'h1 : _076_;
+  assign _084_ = { tlb_pte_way[119:76], r0[18:14] } == _437_[312:264];
+  assign _085_ = _084_ ? 1'h1 : 1'h0;
+  assign _086_ = 1'h1 - tlb_hit_way;
+  assign _087_ = tlb_hit ? _478_ : 1'h0;
+  assign _088_ = tlb_hit ? _479_ : 1'h0;
+  assign _089_ = tlb_hit ? _480_ : 1'h0;
+  assign _090_ = 1'h1 - r0[13];
+  assign _091_ = req_go & _481_;
+  assign _092_ = _442_[48:0] == r0[62:14];
+  assign _093_ = _091_ & _092_;
+  assign _094_ = _093_ ? 1'h1 : 1'h0;
+  assign _095_ = 1'h1 - r0[13];
+  assign _096_ = req_go & _482_;
+  assign _097_ = _444_[48:0] == r0[62:14];
+  assign _098_ = _096_ & _097_;
+  assign _099_ = _098_ ? 1'h1 : _094_;
+  assign _100_ = _098_ ? 1'h1 : 1'h0;
+  assign _101_ = r0[62:14] == _437_[312:264];
+  assign _102_ = _101_ ? 1'h1 : 1'h0;
+  assign _103_ = r0[5] ? _087_ : _099_;
+  assign _104_ = r0[5] ? _088_ : _100_;
+  assign req_same_tag = r0[5] ? _089_ : _102_;
+  assign _105_ = _437_[152:151] == 2'h1;
+  assign _106_ = { 31'h00000000, r0[13] } == { 31'h00000000, _437_[318] };
+  assign _107_ = _105_ & _106_;
+  assign _108_ = _107_ & req_same_tag;
+  assign _109_ = ~ r0[1];
+  assign _110_ = 3'h7 - r0[12:10];
+  assign _111_ = _109_ | _485_;
+  assign _112_ = _108_ ? _111_ : _103_;
+  assign req_hit_way = _108_ ? replace_way : _104_;
+  assign _113_ = { 28'h0000000, _436_[11:8] } == { 28'h0000000, r0[13:10] };
+  assign _114_ = { 31'h00000000, _436_[133] } == { 31'h00000000, req_hit_way };
+  assign _115_ = _113_ & _114_;
+  assign use_forward1_next = _115_ ? _437_[154] : 1'h0;
+  assign _116_ = { 28'h0000000, _437_[141:138] } == { 28'h0000000, r0[13:10] };
+  assign _117_ = { 31'h00000000, _437_[137] } == { 31'h00000000, req_hit_way };
+  assign _118_ = _116_ & _117_;
+  assign use_forward2_next = _118_ ? _437_[136] : 1'h0;
+  assign _119_ = 1'h1 - _437_[318];
   assign replace_way = _437_[155] ? _486_ : _437_[313];
-  assign _118_ = r0[1] | perm_attr[1];
-  assign rc_ok = perm_attr[0] & _118_;
-  assign _119_ = ~ perm_attr[3];
-  assign _120_ = r0[6] | _119_;
-  assign _121_ = r0[1] & perm_attr[4];
-  assign _122_ = perm_attr[5] | _121_;
-  assign perm_ok = _120_ & _122_;
-  assign _123_ = valid_ra & perm_ok;
-  assign access_ok = _123_ & rc_ok;
-  assign _124_ = r0[3] | perm_attr[2];
-  assign _125_ = ~ access_ok;
-  assign _126_ = { r0[1], _124_, _110_ } == 3'h5;
-  assign _127_ = { r0[1], _124_, _110_ } == 3'h4;
-  assign _128_ = { r0[1], _124_, _110_ } == 3'h6;
-  assign _129_ = { r0[1], _124_, _110_ } == 3'h1;
-  assign _130_ = { r0[1], _124_, _110_ } == 3'h0;
-  assign _131_ = { r0[1], _124_, _110_ } == 3'h2;
-  assign _132_ = { r0[1], _124_, _110_ } == 3'h3;
-  assign _133_ = { r0[1], _124_, _110_ } == 3'h7;
-  function [2:0] \18145 ;
+  assign _120_ = r0[1] | perm_attr[1];
+  assign rc_ok = perm_attr[0] & _120_;
+  assign _121_ = r0[6] & r0[0];
+  assign _122_ = ~ perm_attr[3];
+  assign _123_ = _121_ | _122_;
+  assign _124_ = r0[1] & perm_attr[4];
+  assign _125_ = perm_attr[5] | _124_;
+  assign perm_ok = _123_ & _125_;
+  assign _126_ = valid_ra & perm_ok;
+  assign access_ok = _126_ & rc_ok;
+  assign _127_ = r0[3] | perm_attr[2];
+  assign _128_ = ~ access_ok;
+  assign _129_ = { r0[1], _127_, _112_ } == 3'h5;
+  assign _130_ = { r0[1], _127_, _112_ } == 3'h4;
+  assign _131_ = { r0[1], _127_, _112_ } == 3'h6;
+  assign _132_ = { r0[1], _127_, _112_ } == 3'h1;
+  assign _133_ = { r0[1], _127_, _112_ } == 3'h0;
+  assign _134_ = { r0[1], _127_, _112_ } == 3'h2;
+  assign _135_ = { r0[1], _127_, _112_ } == 3'h3;
+  assign _136_ = { r0[1], _127_, _112_ } == 3'h7;
+  function [2:0] \18202 ;
     input [2:0] a;
     input [23:0] b;
     input [7:0] s;
     (* parallel_case *)
     casez (s)
       8'b???????1:
-        \18145  = b[2:0];
+        \18202  = b[2:0];
       8'b??????1?:
-        \18145  = b[5:3];
+        \18202  = b[5:3];
       8'b?????1??:
-        \18145  = b[8:6];
+        \18202  = b[8:6];
       8'b????1???:
-        \18145  = b[11:9];
+        \18202  = b[11:9];
       8'b???1????:
-        \18145  = b[14:12];
+        \18202  = b[14:12];
       8'b??1?????:
-        \18145  = b[17:15];
+        \18202  = b[17:15];
       8'b?1??????:
-        \18145  = b[20:18];
+        \18202  = b[20:18];
       8'b1???????:
-        \18145  = b[23:21];
+        \18202  = b[23:21];
       default:
-        \18145  = a;
+        \18202  = a;
     endcase
   endfunction
-  assign _134_ = \18145 (3'h0, 24'h27fd63, { _133_, _132_, _131_, _130_, _129_, _128_, _127_, _126_ });
-  assign _135_ = cancel_store ? 3'h2 : _134_;
-  assign _136_ = _125_ ? 3'h1 : _135_;
-  assign req_op = req_go ? _136_ : 3'h0;
-  assign _137_ = ~ r0_stall;
-  assign _138_ = m_in[0] ? m_in[10:7] : d_in[13:10];
-  assign early_req_row = _137_ ? _138_ : r0[13:10];
-  assign _139_ = r0_valid & r0[4];
-  assign _140_ = ~ reservation[0];
-  assign _141_ = r0[70:13] != reservation[58:1];
-  assign _142_ = _140_ | _141_;
-  assign _143_ = _142_ ? 1'h1 : 1'h0;
-  assign _144_ = r0[1] ? 1'h0 : _143_;
-  assign _145_ = r0[1] ? 1'h1 : 1'h0;
-  assign _146_ = r0[1] ? 1'h0 : 1'h1;
-  assign cancel_store = _139_ ? _144_ : 1'h0;
-  assign set_rsrv = _139_ ? _145_ : 1'h0;
-  assign clear_rsrv = _139_ ? _146_ : 1'h0;
-  assign _147_ = r0_valid & access_ok;
-  assign _148_ = set_rsrv ? { r0[70:13], 1'h1 } : reservation;
-  assign _149_ = clear_rsrv ? 1'h0 : _148_[0];
-  assign _150_ = clear_rsrv ? reservation[58:1] : _148_[58:1];
-  assign _151_ = _147_ ? { _150_, _149_ } : reservation;
-  assign _152_ = rst ? 1'h0 : _151_[0];
-  assign _153_ = rst ? reservation[58:1] : _151_[58:1];
+  assign _137_ = \18202 (3'h0, 24'h27fd63, { _136_, _135_, _134_, _133_, _132_, _131_, _130_, _129_ });
+  assign _138_ = cancel_store ? 3'h2 : _137_;
+  assign _139_ = _128_ ? 3'h1 : _138_;
+  assign req_op = req_go ? _139_ : 3'h0;
+  assign _140_ = ~ r0_stall;
+  assign _141_ = m_in[0] ? m_in[10:7] : d_in[13:10];
+  assign early_req_row = _140_ ? _141_ : r0[13:10];
+  assign _142_ = r0_valid & r0[4];
+  assign _143_ = ~ reservation[0];
+  assign _144_ = r0[70:13] != reservation[58:1];
+  assign _145_ = _143_ | _144_;
+  assign _146_ = _145_ ? 1'h1 : 1'h0;
+  assign _147_ = r0[1] ? 1'h0 : _146_;
+  assign _148_ = r0[1] ? 1'h1 : 1'h0;
+  assign _149_ = r0[1] ? 1'h0 : 1'h1;
+  assign cancel_store = _142_ ? _147_ : 1'h0;
+  assign set_rsrv = _142_ ? _148_ : 1'h0;
+  assign clear_rsrv = _142_ ? _149_ : 1'h0;
+  assign _150_ = r0_valid & access_ok;
+  assign _151_ = set_rsrv ? { r0[70:13], 1'h1 } : reservation;
+  assign _152_ = clear_rsrv ? 1'h0 : _151_[0];
+  assign _153_ = clear_rsrv ? reservation[58:1] : _151_[58:1];
+  assign _154_ = _150_ ? { _153_, _152_ } : reservation;
+  assign _155_ = rst ? 1'h0 : _154_[0];
+  assign _156_ = rst ? reservation[58:1] : _154_[58:1];
   always @(posedge clk)
-    reservation <= { _153_, _152_ };
-  assign _154_ = _437_[142] ? _437_[63:0] : _437_[127:64];
-  assign _155_ = 1'h1 - _195_[0];
-  assign _156_ = _437_[143] ? _154_[7:0] : _487_[7:0];
-  assign _157_ = _437_[144] ? _154_[15:8] : _487_[15:8];
-  assign _158_ = _437_[145] ? _154_[23:16] : _487_[23:16];
-  assign _159_ = _437_[146] ? _154_[31:24] : _487_[31:24];
-  assign _160_ = _437_[147] ? _154_[39:32] : _487_[39:32];
-  assign _161_ = _437_[148] ? _154_[47:40] : _487_[47:40];
-  assign _162_ = _437_[149] ? _154_[55:48] : _487_[55:48];
-  assign _163_ = _437_[150] ? _154_[63:56] : _487_[63:56];
-  assign _164_ = ~ _197_[2];
-  assign _165_ = 32'd0 == { 31'h00000000, _436_[133] };
-  assign _166_ = _165_ ? 1'h1 : 1'h0;
-  assign _167_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
-  assign _168_ = _437_[152:151] == 2'h1;
-  assign _169_ = _168_ & wishbone_in[64];
-  assign _170_ = { 31'h00000000, replace_way } == 32'd0;
-  assign _171_ = _169_ & _170_;
-  assign _172_ = _171_ ? 1'h1 : 1'h0;
-  assign \rams:0.do_write  = _437_[154] ? _166_ : _172_;
+    reservation <= { _156_, _155_ };
+  assign _157_ = _437_[142] ? _437_[63:0] : _437_[127:64];
+  assign _158_ = 1'h1 - _198_[0];
+  assign _159_ = _437_[143] ? _157_[7:0] : _487_[7:0];
+  assign _160_ = _437_[144] ? _157_[15:8] : _487_[15:8];
+  assign _161_ = _437_[145] ? _157_[23:16] : _487_[23:16];
+  assign _162_ = _437_[146] ? _157_[31:24] : _487_[31:24];
+  assign _163_ = _437_[147] ? _157_[39:32] : _487_[39:32];
+  assign _164_ = _437_[148] ? _157_[47:40] : _487_[47:40];
+  assign _165_ = _437_[149] ? _157_[55:48] : _487_[55:48];
+  assign _166_ = _437_[150] ? _157_[63:56] : _487_[63:56];
+  assign _167_ = ~ _200_[2];
+  assign _168_ = 32'd0 == { 31'h00000000, _436_[133] };
+  assign _169_ = _168_ ? 1'h1 : 1'h0;
+  assign _170_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
+  assign _171_ = _437_[152:151] == 2'h1;
+  assign _172_ = _171_ & wishbone_in[64];
+  assign _173_ = { 31'h00000000, replace_way } == 32'd0;
+  assign _174_ = _172_ & _173_;
+  assign _175_ = _174_ ? 1'h1 : 1'h0;
+  assign \rams:0.do_write  = _437_[154] ? _169_ : _175_;
   assign \rams:0.wr_addr  = _437_[154] ? _436_[11:8] : _437_[317:314];
-  assign \rams:0.wr_data  = _437_[154] ? _436_[124:61] : _167_;
+  assign \rams:0.wr_data  = _437_[154] ? _436_[124:61] : _170_;
   assign \rams:0.wr_sel  = _437_[154] ? _436_[132:125] : 8'hff;
   assign \rams:0.wr_sel_m  = \rams:0.do_write  ? \rams:0.wr_sel  : 8'h00;
-  assign _173_ = 32'd1 == { 31'h00000000, _436_[133] };
-  assign _174_ = _173_ ? 1'h1 : 1'h0;
-  assign _175_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
-  assign _176_ = _437_[152:151] == 2'h1;
-  assign _177_ = _176_ & wishbone_in[64];
-  assign _178_ = { 31'h00000000, replace_way } == 32'd1;
-  assign _179_ = _177_ & _178_;
-  assign _180_ = _179_ ? 1'h1 : 1'h0;
-  assign \rams:1.do_write  = _437_[154] ? _174_ : _180_;
+  assign _176_ = 32'd1 == { 31'h00000000, _436_[133] };
+  assign _177_ = _176_ ? 1'h1 : 1'h0;
+  assign _178_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
+  assign _179_ = _437_[152:151] == 2'h1;
+  assign _180_ = _179_ & wishbone_in[64];
+  assign _181_ = { 31'h00000000, replace_way } == 32'd1;
+  assign _182_ = _180_ & _181_;
+  assign _183_ = _182_ ? 1'h1 : 1'h0;
+  assign \rams:1.do_write  = _437_[154] ? _177_ : _183_;
   assign \rams:1.wr_addr  = _437_[154] ? _436_[11:8] : _437_[317:314];
-  assign \rams:1.wr_data  = _437_[154] ? _436_[124:61] : _175_;
+  assign \rams:1.wr_data  = _437_[154] ? _436_[124:61] : _178_;
   assign \rams:1.wr_sel  = _437_[154] ? _436_[132:125] : 8'hff;
   assign \rams:1.wr_sel_m  = \rams:1.do_write  ? \rams:1.wr_sel  : 8'h00;
-  assign _181_ = req_op == 3'h3;
-  assign _182_ = _181_ ? 1'h1 : 1'h0;
-  assign _183_ = req_op == 3'h3;
-  assign _184_ = req_op == 3'h6;
-  assign _185_ = _183_ | _184_;
-  assign _186_ = _185_ ? 1'h1 : 1'h0;
-  assign _187_ = req_op == 3'h1;
-  assign _188_ = ~ r0[146];
-  assign _189_ = _187_ ? _188_ : 1'h0;
-  assign _190_ = _187_ ? { access_ok, r0[146] } : 2'h0;
-  assign _191_ = req_op == 3'h2;
-  assign _192_ = _191_ ? 1'h1 : 1'h0;
-  assign _193_ = r0_valid ? r0[146] : _194_;
+  assign _184_ = req_op == 3'h3;
+  assign _185_ = _184_ ? 1'h1 : 1'h0;
+  assign _186_ = req_op == 3'h3;
+  assign _187_ = req_op == 3'h6;
+  assign _188_ = _186_ | _187_;
+  assign _189_ = _188_ ? 1'h1 : 1'h0;
+  assign _190_ = req_op == 3'h1;
+  assign _191_ = ~ r0[146];
+  assign _192_ = _190_ ? _191_ : 1'h0;
+  assign _193_ = _190_ ? { access_ok, r0[146] } : 2'h0;
+  assign _194_ = req_op == 3'h2;
+  assign _195_ = _194_ ? 1'h1 : 1'h0;
+  assign _196_ = r0_valid ? r0[146] : _197_;
   always @(posedge clk)
-    _194_ <= _193_;
+    _197_ <= _196_;
   always @(posedge clk)
-    _195_ <= { r0[19], tlb_hit_way, tlb_hit, _186_, r0[13], _182_, req_hit_way };
+    _198_ <= { r0[19], tlb_hit_way, tlb_hit, _189_, r0[13], _185_, req_hit_way };
   always @(posedge clk)
-    _196_ <= _189_;
+    _199_ <= _192_;
   always @(posedge clk)
-    _197_ <= { _192_, _190_ };
-  assign _198_ = use_forward2_next ? _437_[135:128] : 8'h00;
-  assign _199_ = use_forward1_next ? _436_[132:125] : _198_;
-  assign _200_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
-  assign _201_ = _437_[154] ? _436_[124:61] : _200_;
-  assign _202_ = r0[143] | r0[145];
-  assign _203_ = r0_valid & _202_;
-  assign _204_ = req_op == 3'h3;
-  assign _205_ = req_op == 3'h2;
-  assign _206_ = _204_ | _205_;
-  assign _207_ = ~ r0[146];
-  assign _208_ = _210_ ? 1'h1 : 1'h0;
-  assign _209_ = _207_ ? _203_ : 1'h1;
-  assign _210_ = _206_ & _207_;
-  assign _211_ = _206_ ? _209_ : _203_;
-  assign _212_ = 32'd0 == { 31'h00000000, replace_way };
-  assign _213_ = 32'd1 == { 31'h00000000, replace_way };
-  assign _214_ = _437_[155] ? 1'h0 : _437_[155];
-  assign _215_ = _437_[155] ? replace_way : _437_[313];
-  assign _216_ = ~ r0[2];
-  assign _217_ = _216_ ? r0[134:71] : 64'h0000000000000000;
-  assign _218_ = ~ r0[3];
-  assign _219_ = r0[1] & _218_;
-  assign _220_ = r0[2] | _219_;
-  assign _221_ = _220_ ? 8'hff : r0[142:135];
-  assign _222_ = req_op == 3'h4;
-  assign _223_ = req_op == 3'h5;
-  assign _224_ = _222_ | _223_;
-  assign _225_ = req_op == 3'h7;
-  assign _226_ = _224_ | _225_;
-  assign _227_ = req_op == 3'h6;
-  assign _228_ = _226_ | _227_;
-  assign _229_ = _228_ ? 1'h1 : _435_;
-  assign _230_ = _435_ ? _435_ : _229_;
-  assign _231_ = _435_ ? _436_ : { r0[146], req_same_tag, req_hit_way, _221_, _217_, ra, r0[2], req_go, req_op };
-  assign _232_ = _231_[10:8] - 3'h1;
-  assign _233_ = _231_[2:0] == 3'h6;
-  assign _234_ = _233_ ? _231_[133] : _215_;
-  assign _235_ = _231_[2:0] == 3'h3;
-  assign _236_ = _231_[2:0] == 3'h4;
-  assign _237_ = _231_[2:0] == 3'h5;
-  assign _238_ = ~ _231_[4];
-  assign _239_ = ~ _231_[135];
-  assign _240_ = _252_ ? 1'h1 : _208_;
-  assign _241_ = _239_ ? _211_ : 1'h1;
-  assign _242_ = _231_[2:0] == 3'h6;
-  assign _243_ = _248_ ? 1'h1 : 1'h0;
-  assign _244_ = _231_[2:0] == 3'h7;
-  assign _245_ = _244_ ? 1'h1 : _214_;
-  assign _246_ = _238_ ? 1'h0 : _230_;
-  assign _247_ = _238_ ? 2'h2 : 2'h1;
-  assign _248_ = _238_ & _242_;
-  assign _249_ = _238_ ? _214_ : _245_;
-  assign _250_ = _238_ ? 1'h1 : 1'h0;
-  assign _251_ = _238_ ? 3'h1 : _437_[332:330];
-  assign _252_ = _238_ & _239_;
-  assign _253_ = _238_ ? _241_ : _211_;
-  assign _254_ = _231_[2:0] == 3'h6;
-  assign _255_ = _231_[2:0] == 3'h7;
-  assign _256_ = _254_ | _255_;
-  assign _257_ = _231_[2:0] == 3'h0;
-  assign _258_ = _231_[2:0] == 3'h1;
-  assign _259_ = _231_[2:0] == 3'h2;
-  function [0:0] \18752 ;
+    _200_ <= { _195_, _193_ };
+  assign _201_ = use_forward2_next ? _437_[135:128] : 8'h00;
+  assign _202_ = use_forward1_next ? _436_[132:125] : _201_;
+  assign _203_ = _437_[153] ? 64'h0000000000000000 : wishbone_in[63:0];
+  assign _204_ = _437_[154] ? _436_[124:61] : _203_;
+  assign _205_ = r0[143] | r0[145];
+  assign _206_ = r0_valid & _205_;
+  assign _207_ = req_op == 3'h3;
+  assign _208_ = req_op == 3'h2;
+  assign _209_ = _207_ | _208_;
+  assign _210_ = ~ r0[146];
+  assign _211_ = _213_ ? 1'h1 : 1'h0;
+  assign _212_ = _210_ ? _206_ : 1'h1;
+  assign _213_ = _209_ & _210_;
+  assign _214_ = _209_ ? _212_ : _206_;
+  assign _215_ = 32'd0 == { 31'h00000000, replace_way };
+  assign _216_ = 32'd1 == { 31'h00000000, replace_way };
+  assign _217_ = _437_[155] ? 1'h0 : _437_[155];
+  assign _218_ = _437_[155] ? replace_way : _437_[313];
+  assign _219_ = ~ r0[2];
+  assign _220_ = _219_ ? r0[134:71] : 64'h0000000000000000;
+  assign _221_ = ~ r0[3];
+  assign _222_ = r0[1] & _221_;
+  assign _223_ = r0[2] | _222_;
+  assign _224_ = _223_ ? 8'hff : r0[142:135];
+  assign _225_ = req_op == 3'h4;
+  assign _226_ = req_op == 3'h5;
+  assign _227_ = _225_ | _226_;
+  assign _228_ = req_op == 3'h7;
+  assign _229_ = _227_ | _228_;
+  assign _230_ = req_op == 3'h6;
+  assign _231_ = _229_ | _230_;
+  assign _232_ = _231_ ? 1'h1 : _435_;
+  assign _233_ = _435_ ? _435_ : _232_;
+  assign _234_ = _435_ ? _436_ : { r0[146], req_same_tag, req_hit_way, _224_, _220_, ra, r0[2], req_go, req_op };
+  assign _235_ = _234_[10:8] - 3'h1;
+  assign _236_ = _234_[2:0] == 3'h6;
+  assign _237_ = _236_ ? _234_[133] : _218_;
+  assign _238_ = _234_[2:0] == 3'h3;
+  assign _239_ = _234_[2:0] == 3'h4;
+  assign _240_ = _234_[2:0] == 3'h5;
+  assign _241_ = ~ _234_[4];
+  assign _242_ = ~ _234_[135];
+  assign _243_ = _255_ ? 1'h1 : _211_;
+  assign _244_ = _242_ ? _214_ : 1'h1;
+  assign _245_ = _234_[2:0] == 3'h6;
+  assign _246_ = _251_ ? 1'h1 : 1'h0;
+  assign _247_ = _234_[2:0] == 3'h7;
+  assign _248_ = _247_ ? 1'h1 : _217_;
+  assign _249_ = _241_ ? 1'h0 : _233_;
+  assign _250_ = _241_ ? 2'h2 : 2'h1;
+  assign _251_ = _241_ & _245_;
+  assign _252_ = _241_ ? _217_ : _248_;
+  assign _253_ = _241_ ? 1'h1 : 1'h0;
+  assign _254_ = _241_ ? 3'h1 : _437_[332:330];
+  assign _255_ = _241_ & _242_;
+  assign _256_ = _241_ ? _244_ : _214_;
+  assign _257_ = _234_[2:0] == 3'h6;
+  assign _258_ = _234_[2:0] == 3'h7;
+  assign _259_ = _257_ | _258_;
+  assign _260_ = _234_[2:0] == 3'h0;
+  assign _261_ = _234_[2:0] == 3'h1;
+  assign _262_ = _234_[2:0] == 3'h2;
+  function [0:0] \18809 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18752  = b[0:0];
+        \18809  = b[0:0];
       7'b?????1?:
-        \18752  = b[1:1];
+        \18809  = b[1:1];
       7'b????1??:
-        \18752  = b[2:2];
+        \18809  = b[2:2];
       7'b???1???:
-        \18752  = b[3:3];
+        \18809  = b[3:3];
       7'b??1????:
-        \18752  = b[4:4];
+        \18809  = b[4:4];
       7'b?1?????:
-        \18752  = b[5:5];
+        \18809  = b[5:5];
       7'b1??????:
-        \18752  = b[6:6];
+        \18809  = b[6:6];
       default:
-        \18752  = a;
+        \18809  = a;
     endcase
   endfunction
-  assign _260_ = \18752 (1'hx, { _230_, _230_, _230_, _246_, _230_, _230_, _230_ }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [1:0] \18755 ;
+  assign _263_ = \18809 (1'hx, { _233_, _233_, _233_, _249_, _233_, _233_, _233_ }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [1:0] \18812 ;
     input [1:0] a;
     input [13:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18755  = b[1:0];
+        \18812  = b[1:0];
       7'b?????1?:
-        \18755  = b[3:2];
+        \18812  = b[3:2];
       7'b????1??:
-        \18755  = b[5:4];
+        \18812  = b[5:4];
       7'b???1???:
-        \18755  = b[7:6];
+        \18812  = b[7:6];
       7'b??1????:
-        \18755  = b[9:8];
+        \18812  = b[9:8];
       7'b?1?????:
-        \18755  = b[11:10];
+        \18812  = b[11:10];
       7'b1??????:
-        \18755  = b[13:12];
+        \18812  = b[13:12];
       default:
-        \18755  = a;
+        \18812  = a;
     endcase
   endfunction
-  assign _261_ = \18755 (2'hx, { _437_[152:151], _437_[152:151], _437_[152:151], _247_, 4'hd, _437_[152:151] }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18757 ;
+  assign _264_ = \18812 (2'hx, { _437_[152:151], _437_[152:151], _437_[152:151], _250_, 4'hd, _437_[152:151] }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18814 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18757  = b[0:0];
+        \18814  = b[0:0];
       7'b?????1?:
-        \18757  = b[1:1];
+        \18814  = b[1:1];
       7'b????1??:
-        \18757  = b[2:2];
+        \18814  = b[2:2];
       7'b???1???:
-        \18757  = b[3:3];
+        \18814  = b[3:3];
       7'b??1????:
-        \18757  = b[4:4];
+        \18814  = b[4:4];
       7'b?1?????:
-        \18757  = b[5:5];
+        \18814  = b[5:5];
       7'b1??????:
-        \18757  = b[6:6];
+        \18814  = b[6:6];
       default:
-        \18757  = a;
+        \18814  = a;
     endcase
   endfunction
-  assign _262_ = \18757 (1'hx, { 3'h0, _243_, 3'h0 }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18759 ;
+  assign _265_ = \18814 (1'hx, { 3'h0, _246_, 3'h0 }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18816 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18759  = b[0:0];
+        \18816  = b[0:0];
       7'b?????1?:
-        \18759  = b[1:1];
+        \18816  = b[1:1];
       7'b????1??:
-        \18759  = b[2:2];
+        \18816  = b[2:2];
       7'b???1???:
-        \18759  = b[3:3];
+        \18816  = b[3:3];
       7'b??1????:
-        \18759  = b[4:4];
+        \18816  = b[4:4];
       7'b?1?????:
-        \18759  = b[5:5];
+        \18816  = b[5:5];
       7'b1??????:
-        \18759  = b[6:6];
+        \18816  = b[6:6];
       default:
-        \18759  = a;
+        \18816  = a;
     endcase
   endfunction
-  assign _263_ = \18759 (1'hx, { _214_, _214_, _214_, _249_, _214_, 1'h1, _214_ }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18761 ;
+  assign _266_ = \18816 (1'hx, { _217_, _217_, _217_, _252_, _217_, 1'h1, _217_ }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18818 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18761  = b[0:0];
+        \18818  = b[0:0];
       7'b?????1?:
-        \18761  = b[1:1];
+        \18818  = b[1:1];
       7'b????1??:
-        \18761  = b[2:2];
+        \18818  = b[2:2];
       7'b???1???:
-        \18761  = b[3:3];
+        \18818  = b[3:3];
       7'b??1????:
-        \18761  = b[4:4];
+        \18818  = b[4:4];
       7'b?1?????:
-        \18761  = b[5:5];
+        \18818  = b[5:5];
       7'b1??????:
-        \18761  = b[6:6];
+        \18818  = b[6:6];
       default:
-        \18761  = a;
+        \18818  = a;
     endcase
   endfunction
-  assign _264_ = \18761 (1'hx, { 3'h0, _250_, 3'h0 }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18764 ;
+  assign _267_ = \18818 (1'hx, { 3'h0, _253_, 3'h0 }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18821 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18764  = b[0:0];
+        \18821  = b[0:0];
       7'b?????1?:
-        \18764  = b[1:1];
+        \18821  = b[1:1];
       7'b????1??:
-        \18764  = b[2:2];
+        \18821  = b[2:2];
       7'b???1???:
-        \18764  = b[3:3];
+        \18821  = b[3:3];
       7'b??1????:
-        \18764  = b[4:4];
+        \18821  = b[4:4];
       7'b?1?????:
-        \18764  = b[5:5];
+        \18821  = b[5:5];
       7'b1??????:
-        \18764  = b[6:6];
+        \18821  = b[6:6];
       default:
-        \18764  = a;
+        \18821  = a;
     endcase
   endfunction
-  assign _265_ = \18764 (1'hx, { _437_[253], _437_[253], _437_[253], 3'h7, _437_[253] }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18767 ;
+  assign _268_ = \18821 (1'hx, { _437_[261], _437_[261], _437_[261], 3'h7, _437_[261] }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18824 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18767  = b[0:0];
+        \18824  = b[0:0];
       7'b?????1?:
-        \18767  = b[1:1];
+        \18824  = b[1:1];
       7'b????1??:
-        \18767  = b[2:2];
+        \18824  = b[2:2];
       7'b???1???:
-        \18767  = b[3:3];
+        \18824  = b[3:3];
       7'b??1????:
-        \18767  = b[4:4];
+        \18824  = b[4:4];
       7'b?1?????:
-        \18767  = b[5:5];
+        \18824  = b[5:5];
       7'b1??????:
-        \18767  = b[6:6];
+        \18824  = b[6:6];
       default:
-        \18767  = a;
+        \18824  = a;
     endcase
   endfunction
-  assign _266_ = \18767 (1'hx, { _437_[254], _437_[254], _437_[254], 3'h7, _437_[254] }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18770 ;
+  assign _269_ = \18824 (1'hx, { _437_[262], _437_[262], _437_[262], 3'h7, _437_[262] }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18827 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18770  = b[0:0];
+        \18827  = b[0:0];
       7'b?????1?:
-        \18770  = b[1:1];
+        \18827  = b[1:1];
       7'b????1??:
-        \18770  = b[2:2];
+        \18827  = b[2:2];
       7'b???1???:
-        \18770  = b[3:3];
+        \18827  = b[3:3];
       7'b??1????:
-        \18770  = b[4:4];
+        \18827  = b[4:4];
       7'b?1?????:
-        \18770  = b[5:5];
+        \18827  = b[5:5];
       7'b1??????:
-        \18770  = b[6:6];
+        \18827  = b[6:6];
       default:
-        \18770  = a;
+        \18827  = a;
     endcase
   endfunction
-  assign _267_ = \18770 (1'hx, { _437_[263], _437_[263], _437_[263], 3'h4, _437_[263] }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [2:0] \18773 ;
+  assign _270_ = \18827 (1'hx, { _437_[263], _437_[263], _437_[263], 3'h4, _437_[263] }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [2:0] \18830 ;
     input [2:0] a;
     input [20:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18773  = b[2:0];
+        \18830  = b[2:0];
       7'b?????1?:
-        \18773  = b[5:3];
+        \18830  = b[5:3];
       7'b????1??:
-        \18773  = b[8:6];
+        \18830  = b[8:6];
       7'b???1???:
-        \18773  = b[11:9];
+        \18830  = b[11:9];
       7'b??1????:
-        \18773  = b[14:12];
+        \18830  = b[14:12];
       7'b?1?????:
-        \18773  = b[17:15];
+        \18830  = b[17:15];
       7'b1??????:
-        \18773  = b[20:18];
+        \18830  = b[20:18];
       default:
-        \18773  = a;
+        \18830  = a;
     endcase
   endfunction
-  assign _268_ = \18773 (3'hx, { _437_[332:330], _437_[332:330], _437_[332:330], _251_, _437_[332:330], _437_[332:330], _437_[332:330] }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18775 ;
+  assign _271_ = \18830 (3'hx, { _437_[332:330], _437_[332:330], _437_[332:330], _254_, _437_[332:330], _437_[332:330], _437_[332:330] }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18832 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18775  = b[0:0];
+        \18832  = b[0:0];
       7'b?????1?:
-        \18775  = b[1:1];
+        \18832  = b[1:1];
       7'b????1??:
-        \18775  = b[2:2];
+        \18832  = b[2:2];
       7'b???1???:
-        \18775  = b[3:3];
+        \18832  = b[3:3];
       7'b??1????:
-        \18775  = b[4:4];
+        \18832  = b[4:4];
       7'b?1?????:
-        \18775  = b[5:5];
+        \18832  = b[5:5];
       7'b1??????:
-        \18775  = b[6:6];
+        \18832  = b[6:6];
       default:
-        \18775  = a;
+        \18832  = a;
     endcase
   endfunction
-  assign _269_ = \18775 (1'hx, { _208_, _208_, _208_, _240_, _208_, _208_, _208_ }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  function [0:0] \18777 ;
+  assign _272_ = \18832 (1'hx, { _211_, _211_, _211_, _243_, _211_, _211_, _211_ }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  function [0:0] \18834 ;
     input [0:0] a;
     input [6:0] b;
     input [6:0] s;
     (* parallel_case *)
     casez (s)
       7'b??????1:
-        \18777  = b[0:0];
+        \18834  = b[0:0];
       7'b?????1?:
-        \18777  = b[1:1];
+        \18834  = b[1:1];
       7'b????1??:
-        \18777  = b[2:2];
+        \18834  = b[2:2];
       7'b???1???:
-        \18777  = b[3:3];
+        \18834  = b[3:3];
       7'b??1????:
-        \18777  = b[4:4];
+        \18834  = b[4:4];
       7'b?1?????:
-        \18777  = b[5:5];
+        \18834  = b[5:5];
       7'b1??????:
-        \18777  = b[6:6];
+        \18834  = b[6:6];
       default:
-        \18777  = a;
+        \18834  = a;
     endcase
   endfunction
-  assign _270_ = \18777 (1'hx, { _211_, _211_, _211_, _253_, _211_, _211_, _211_ }, { _259_, _258_, _257_, _256_, _237_, _236_, _235_ });
-  assign _271_ = _437_[152:151] == 2'h0;
-  assign _272_ = ~ _437_[254];
-  assign _273_ = ~ wishbone_in[65];
-  assign _274_ = ~ _272_;
-  assign _275_ = _273_ & _274_;
-  assign _276_ = _437_[162:160] == _437_[321:319];
-  assign _277_ = _281_ ? 1'h0 : _437_[254];
-  assign _278_ = _282_ ? 1'h1 : _272_;
-  assign _279_ = _437_[162:160] + 3'h1;
-  assign _280_ = _275_ ? { _437_[188:163], _279_, _437_[159:157] } : _437_[188:157];
-  assign _281_ = _275_ & _276_;
-  assign _282_ = _275_ & _276_;
-  assign _283_ = 3'h7 - _437_[316:314];
-  assign _284_ = _435_ & _436_[134];
-  assign _285_ = _437_[153] & _436_[4];
-  assign _286_ = ~ _437_[153];
-  assign _287_ = _436_[2:0] == 3'h4;
-  assign _288_ = _286_ & _287_;
-  assign _289_ = _285_ | _288_;
-  assign _290_ = _284_ & _289_;
-  assign _291_ = { 28'h0000000, _437_[317:314] } == { 28'h0000000, _436_[11:8] };
-  assign _292_ = _290_ & _291_;
-  assign _293_ = ~ _194_;
-  assign _294_ = _315_ ? 1'h1 : _208_;
-  assign _295_ = _293_ ? _211_ : 1'h1;
-  assign _296_ = _309_ ? 1'h0 : _230_;
-  assign _297_ = _292_ ? 9'h1ff : { _199_, use_forward1_next };
-  assign _298_ = _311_ ? 1'h1 : 1'h0;
-  assign _299_ = _292_ & _293_;
-  assign _300_ = _316_ ? _295_ : _211_;
-  assign _301_ = _437_[316:314] == _437_[321:319];
-  assign _302_ = _278_ & _301_;
-  assign _303_ = 1'h1 - _437_[318];
-  assign _304_ = _308_ ? { _520_, _519_, _518_, _517_ } : cache_valids;
-  assign _305_ = _302_ ? 2'h0 : _437_[152:151];
-  assign _306_ = _312_ ? 1'h0 : _437_[253];
-  assign _307_ = _437_[316:314] + 3'h1;
-  assign _308_ = wishbone_in[64] & _302_;
-  assign _309_ = wishbone_in[64] & _292_;
-  assign _310_ = wishbone_in[64] ? { _305_, _297_ } : { _437_[152:151], _199_, use_forward1_next };
-  assign _311_ = wishbone_in[64] & _292_;
-  assign _312_ = wishbone_in[64] & _302_;
-  assign _313_ = wishbone_in[64] ? { _437_[317], _307_ } : _437_[317:314];
-  assign _314_ = wishbone_in[64] ? { _510_, _509_, _508_, _507_, _506_, _505_, _504_, _503_ } : _437_[329:322];
-  assign _315_ = wishbone_in[64] & _299_;
-  assign _316_ = wishbone_in[64] & _292_;
-  assign _317_ = _437_[152:151] == 2'h1;
-  assign _318_ = ~ _437_[254];
-  assign _319_ = _437_[333] != _437_[334];
-  assign _320_ = _437_[332:330] + 3'h1;
-  assign _321_ = _437_[332:330] - 3'h1;
-  assign _322_ = _437_[333] ? _320_ : _321_;
-  assign _323_ = _319_ ? _322_ : _437_[332:330];
-  assign _324_ = ~ wishbone_in[65];
-  assign _325_ = _231_[3] ? _231_[11:5] : _437_[163:157];
-  assign _326_ = _346_ ? _231_[124:61] : _437_[252:189];
-  assign _327_ = _231_[3] ? _231_[132:125] : _437_[262:255];
-  assign _328_ = _323_ < 3'h7;
-  assign _329_ = _328_ & _231_[134];
-  assign _330_ = _231_[2:0] == 3'h7;
-  assign _331_ = _231_[2:0] == 3'h6;
-  assign _332_ = _330_ | _331_;
-  assign _333_ = _329_ & _332_;
-  assign _334_ = _231_[2:0] == 3'h6;
-  assign _335_ = _344_ ? 1'h1 : 1'h0;
-  assign _336_ = _343_ ? 1'h0 : _230_;
-  assign _337_ = _333_ & _334_;
-  assign _338_ = _333_ ? 1'h1 : 1'h0;
-  assign _339_ = _333_ ? 1'h1 : 1'h0;
-  assign _340_ = _347_ ? 1'h1 : 1'h0;
-  assign _341_ = _348_ ? 1'h1 : _208_;
-  assign _342_ = _333_ ? 1'h0 : 1'h1;
-  assign _343_ = _324_ & _333_;
-  assign _344_ = _324_ & _337_;
-  assign _345_ = _324_ ? { _325_, _338_ } : { _437_[163:157], 1'h0 };
-  assign _346_ = _324_ & _231_[3];
-  assign _347_ = _324_ & _333_;
-  assign _348_ = _324_ & _333_;
-  assign _349_ = _324_ ? _342_ : _318_;
-  assign _350_ = _323_ == 3'h1;
-  assign _351_ = _349_ & _350_;
-  assign _352_ = _355_ ? 2'h0 : _437_[152:151];
-  assign _353_ = _324_ ? _339_ : _437_[254];
-  assign _354_ = _351_ ? 2'h0 : { _353_, _437_[253] };
-  assign _355_ = wishbone_in[64] & _351_;
-  assign _356_ = _324_ ? _339_ : _437_[254];
-  assign _357_ = wishbone_in[64] ? _354_ : { _356_, _437_[253] };
-  assign _358_ = wishbone_in[64] ? 1'h1 : 1'h0;
-  assign _359_ = _324_ ? _327_ : _437_[262:255];
+  assign _273_ = \18834 (1'hx, { _214_, _214_, _214_, _256_, _214_, _214_, _214_ }, { _262_, _261_, _260_, _259_, _240_, _239_, _238_ });
+  assign _274_ = _437_[152:151] == 2'h0;
+  assign _275_ = ~ _437_[262];
+  assign _276_ = ~ wishbone_in[65];
+  assign _277_ = ~ _275_;
+  assign _278_ = _276_ & _277_;
+  assign _279_ = _437_[162:160] == _437_[321:319];
+  assign _280_ = _284_ ? 1'h0 : _437_[262];
+  assign _281_ = _285_ ? 1'h1 : _275_;
+  assign _282_ = _437_[162:160] + 3'h1;
+  assign _283_ = _278_ ? { _437_[188:163], _282_, _437_[159:157] } : _437_[188:157];
+  assign _284_ = _278_ & _279_;
+  assign _285_ = _278_ & _279_;
+  assign _286_ = 3'h7 - _437_[316:314];
+  assign _287_ = _435_ & _436_[134];
+  assign _288_ = _437_[153] & _436_[4];
+  assign _289_ = ~ _437_[153];
+  assign _290_ = _436_[2:0] == 3'h4;
+  assign _291_ = _289_ & _290_;
+  assign _292_ = _288_ | _291_;
+  assign _293_ = _287_ & _292_;
+  assign _294_ = { 28'h0000000, _437_[317:314] } == { 28'h0000000, _436_[11:8] };
+  assign _295_ = _293_ & _294_;
+  assign _296_ = ~ _197_;
+  assign _297_ = _318_ ? 1'h1 : _211_;
+  assign _298_ = _296_ ? _214_ : 1'h1;
+  assign _299_ = _312_ ? 1'h0 : _233_;
+  assign _300_ = _295_ ? 9'h1ff : { _202_, use_forward1_next };
+  assign _301_ = _314_ ? 1'h1 : 1'h0;
+  assign _302_ = _295_ & _296_;
+  assign _303_ = _319_ ? _298_ : _214_;
+  assign _304_ = _437_[316:314] == _437_[321:319];
+  assign _305_ = _281_ & _304_;
+  assign _306_ = 1'h1 - _437_[318];
+  assign _307_ = _311_ ? { _520_, _519_, _518_, _517_ } : cache_valids;
+  assign _308_ = _305_ ? 2'h0 : _437_[152:151];
+  assign _309_ = _315_ ? 1'h0 : _437_[261];
+  assign _310_ = _437_[316:314] + 3'h1;
+  assign _311_ = wishbone_in[64] & _305_;
+  assign _312_ = wishbone_in[64] & _295_;
+  assign _313_ = wishbone_in[64] ? { _308_, _300_ } : { _437_[152:151], _202_, use_forward1_next };
+  assign _314_ = wishbone_in[64] & _295_;
+  assign _315_ = wishbone_in[64] & _305_;
+  assign _316_ = wishbone_in[64] ? { _437_[317], _310_ } : _437_[317:314];
+  assign _317_ = wishbone_in[64] ? { _510_, _509_, _508_, _507_, _506_, _505_, _504_, _503_ } : _437_[329:322];
+  assign _318_ = wishbone_in[64] & _302_;
+  assign _319_ = wishbone_in[64] & _295_;
+  assign _320_ = _437_[152:151] == 2'h1;
+  assign _321_ = ~ _437_[262];
+  assign _322_ = _437_[333] != _437_[334];
+  assign _323_ = _437_[332:330] + 3'h1;
+  assign _324_ = _437_[332:330] - 3'h1;
+  assign _325_ = _437_[333] ? _323_ : _324_;
+  assign _326_ = _322_ ? _325_ : _437_[332:330];
+  assign _327_ = ~ wishbone_in[65];
+  assign _328_ = _234_[3] ? _234_[11:5] : _437_[163:157];
+  assign _329_ = _348_ ? _234_[132:61] : _437_[260:189];
+  assign _330_ = _326_ < 3'h7;
+  assign _331_ = _330_ & _234_[134];
+  assign _332_ = _234_[2:0] == 3'h7;
+  assign _333_ = _234_[2:0] == 3'h6;
+  assign _334_ = _332_ | _333_;
+  assign _335_ = _331_ & _334_;
+  assign _336_ = _234_[2:0] == 3'h6;
+  assign _337_ = _346_ ? 1'h1 : 1'h0;
+  assign _338_ = _345_ ? 1'h0 : _233_;
+  assign _339_ = _335_ & _336_;
+  assign _340_ = _335_ ? 1'h1 : 1'h0;
+  assign _341_ = _335_ ? 1'h1 : 1'h0;
+  assign _342_ = _350_ ? 1'h1 : 1'h0;
+  assign _343_ = _351_ ? 1'h1 : _211_;
+  assign _344_ = _335_ ? 1'h0 : 1'h1;
+  assign _345_ = _327_ & _335_;
+  assign _346_ = _327_ & _339_;
+  assign _347_ = _327_ ? { _328_, _340_ } : { _437_[163:157], 1'h0 };
+  assign _348_ = _327_ & _234_[3];
+  assign _349_ = _327_ ? _341_ : _437_[262];
+  assign _350_ = _327_ & _335_;
+  assign _351_ = _327_ & _335_;
+  assign _352_ = _327_ ? _344_ : _321_;
+  assign _353_ = _326_ == 3'h1;
+  assign _354_ = _352_ & _353_;
+  assign _355_ = _357_ ? 2'h0 : _437_[152:151];
+  assign _356_ = _354_ ? 2'h0 : { _349_, _437_[261] };
+  assign _357_ = wishbone_in[64] & _354_;
+  assign _358_ = wishbone_in[64] ? _356_ : { _349_, _437_[261] };
+  assign _359_ = wishbone_in[64] ? 1'h1 : 1'h0;
   assign _360_ = _437_[152:151] == 2'h2;
   assign _361_ = ~ wishbone_in[65];
-  assign _362_ = _361_ ? 1'h0 : _437_[254];
-  assign _363_ = ~ _194_;
-  assign _364_ = _370_ ? 1'h1 : _208_;
-  assign _365_ = _363_ ? _211_ : 1'h1;
-  assign _366_ = wishbone_in[64] ? 1'h0 : _230_;
-  assign _367_ = wishbone_in[64] ? 11'h1ff : { _437_[152:151], _199_, use_forward1_next };
+  assign _362_ = _361_ ? 1'h0 : _437_[262];
+  assign _363_ = ~ _197_;
+  assign _364_ = _370_ ? 1'h1 : _211_;
+  assign _365_ = _363_ ? _214_ : 1'h1;
+  assign _366_ = wishbone_in[64] ? 1'h0 : _233_;
+  assign _367_ = wishbone_in[64] ? 11'h1ff : { _437_[152:151], _202_, use_forward1_next };
   assign _368_ = wishbone_in[64] ? 1'h1 : 1'h0;
-  assign _369_ = wishbone_in[64] ? 2'h0 : { _362_, _437_[253] };
+  assign _369_ = wishbone_in[64] ? 2'h0 : { _362_, _437_[261] };
   assign _370_ = wishbone_in[64] & _363_;
-  assign _371_ = wishbone_in[64] ? _365_ : _211_;
+  assign _371_ = wishbone_in[64] ? _365_ : _214_;
   assign _372_ = _437_[152:151] == 2'h3;
-  function [3:0] \19091 ;
+  function [3:0] \19137 ;
     input [3:0] a;
     input [15:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19091  = b[3:0];
+        \19137  = b[3:0];
       4'b??1?:
-        \19091  = b[7:4];
+        \19137  = b[7:4];
       4'b?1??:
-        \19091  = b[11:8];
+        \19137  = b[11:8];
       4'b1???:
-        \19091  = b[15:12];
+        \19137  = b[15:12];
       default:
-        \19091  = a;
+        \19137  = a;
     endcase
   endfunction
-  assign _373_ = \19091 (4'hx, { cache_valids, cache_valids, _304_, cache_valids }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19093 ;
+  assign _373_ = \19137 (4'hx, { cache_valids, cache_valids, _307_, cache_valids }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19139 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19093  = b[0:0];
+        \19139  = b[0:0];
       4'b??1?:
-        \19093  = b[1:1];
+        \19139  = b[1:1];
       4'b?1??:
-        \19093  = b[2:2];
+        \19139  = b[2:2];
       4'b1???:
-        \19093  = b[3:3];
+        \19139  = b[3:3];
       default:
-        \19093  = a;
+        \19139  = a;
     endcase
   endfunction
-  assign _374_ = \19093 (1'hx, { _366_, _336_, _296_, _260_ }, { _372_, _360_, _317_, _271_ });
-  assign _375_ = _228_ ? req_same_tag : _436_[134];
+  assign _374_ = \19139 (1'hx, { _366_, _338_, _299_, _263_ }, { _372_, _360_, _320_, _274_ });
+  assign _375_ = _231_ ? req_same_tag : _436_[134];
   assign _376_ = _435_ ? _436_[134] : _375_;
-  function [0:0] \19100 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19100  = b[0:0];
-      4'b??1?:
-        \19100  = b[1:1];
-      4'b?1??:
-        \19100  = b[2:2];
-      4'b1???:
-        \19100  = b[3:3];
-      default:
-        \19100  = a;
-    endcase
-  endfunction
-  assign _377_ = \19100 (1'hx, { _376_, _376_, _376_, 1'h1 }, { _372_, _360_, _317_, _271_ });
-  assign _378_ = _437_[154] ? 1'h1 : 1'h0;
-  function [0:0] \19105 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19105  = b[0:0];
-      4'b??1?:
-        \19105  = b[1:1];
-      4'b?1??:
-        \19105  = b[2:2];
-      4'b1???:
-        \19105  = b[3:3];
-      default:
-        \19105  = a;
-    endcase
-  endfunction
-  assign _379_ = \19105 (1'hx, { _378_, _378_, wishbone_in[64], _378_ }, { _372_, _360_, _317_, _271_ });
-  function [8:0] \19110 ;
-    input [8:0] a;
-    input [35:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19110  = b[8:0];
-      4'b??1?:
-        \19110  = b[17:9];
-      4'b?1??:
-        \19110  = b[26:18];
-      4'b1???:
-        \19110  = b[35:27];
-      default:
-        \19110  = a;
-    endcase
-  endfunction
-  assign _380_ = \19110 (9'hxxx, { _367_[8:0], _199_, use_forward1_next, _310_[8:0], _199_, use_forward1_next }, { _372_, _360_, _317_, _271_ });
-  function [1:0] \19114 ;
-    input [1:0] a;
-    input [7:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19114  = b[1:0];
-      4'b??1?:
-        \19114  = b[3:2];
-      4'b?1??:
-        \19114  = b[5:4];
-      4'b1???:
-        \19114  = b[7:6];
-      default:
-        \19114  = a;
-    endcase
-  endfunction
-  assign _381_ = \19114 (2'hx, { _367_[10:9], _352_, _310_[10:9], _261_ }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19117 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19117  = b[0:0];
-      4'b??1?:
-        \19117  = b[1:1];
-      4'b?1??:
-        \19117  = b[2:2];
-      4'b1???:
-        \19117  = b[3:3];
-      default:
-        \19117  = a;
-    endcase
-  endfunction
-  assign _382_ = \19117 (1'hx, { _437_[153], _437_[153], _437_[153], _231_[4] }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19119 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19119  = b[0:0];
-      4'b??1?:
-        \19119  = b[1:1];
-      4'b?1??:
-        \19119  = b[2:2];
-      4'b1???:
-        \19119  = b[3:3];
-      default:
-        \19119  = a;
-    endcase
-  endfunction
-  assign _383_ = \19119 (1'hx, { 1'h0, _335_, 1'h0, _262_ }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19121 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19121  = b[0:0];
-      4'b??1?:
-        \19121  = b[1:1];
-      4'b?1??:
-        \19121  = b[2:2];
-      4'b1???:
-        \19121  = b[3:3];
-      default:
-        \19121  = a;
-    endcase
-  endfunction
-  assign _384_ = \19121 (1'hx, { _214_, _214_, _214_, _263_ }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19124 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19124  = b[0:0];
-      4'b??1?:
-        \19124  = b[1:1];
-      4'b?1??:
-        \19124  = b[2:2];
-      4'b1???:
-        \19124  = b[3:3];
-      default:
-        \19124  = a;
-    endcase
-  endfunction
-  assign _385_ = \19124 (1'hx, { _368_, _345_[0], _298_, _264_ }, { _372_, _360_, _317_, _271_ });
-  function [6:0] \19130 ;
-    input [6:0] a;
-    input [27:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19130  = b[6:0];
-      4'b??1?:
-        \19130  = b[13:7];
-      4'b?1??:
-        \19130  = b[20:14];
-      4'b1???:
-        \19130  = b[27:21];
-      default:
-        \19130  = a;
-    endcase
-  endfunction
-  assign _386_ = \19130 (7'hxx, { _437_[163:157], _345_[7:1], _280_[6:0], _231_[11:5] }, { _372_, _360_, _317_, _271_ });
-  function [24:0] \19135 ;
-    input [24:0] a;
-    input [99:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19135  = b[24:0];
-      4'b??1?:
-        \19135  = b[49:25];
-      4'b?1??:
-        \19135  = b[74:50];
-      4'b1???:
-        \19135  = b[99:75];
-      default:
-        \19135  = a;
-    endcase
-  endfunction
-  assign _387_ = \19135 (25'hxxxxxxx, { _437_[188:164], _437_[188:164], _280_[31:7], _231_[36:12] }, { _372_, _360_, _317_, _271_ });
-  function [63:0] \19138 ;
-    input [63:0] a;
-    input [255:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19138  = b[63:0];
-      4'b??1?:
-        \19138  = b[127:64];
-      4'b?1??:
-        \19138  = b[191:128];
-      4'b1???:
-        \19138  = b[255:192];
-      default:
-        \19138  = a;
-    endcase
-  endfunction
-  assign _388_ = \19138 (64'hxxxxxxxxxxxxxxxx, { _437_[252:189], _326_, _437_[252:189], _231_[124:61] }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19142 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19142  = b[0:0];
-      4'b??1?:
-        \19142  = b[1:1];
-      4'b?1??:
-        \19142  = b[2:2];
-      4'b1???:
-        \19142  = b[3:3];
-      default:
-        \19142  = a;
-    endcase
-  endfunction
-  assign _389_ = \19142 (1'hx, { _369_[0], _357_[0], _306_, _265_ }, { _372_, _360_, _317_, _271_ });
   function [0:0] \19146 ;
     input [0:0] a;
     input [3:0] b;
@@ -1749,102 +1521,65 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
         \19146  = a;
     endcase
   endfunction
-  assign _390_ = \19146 (1'hx, { _369_[1], _357_[1], _277_, _266_ }, { _372_, _360_, _317_, _271_ });
-  function [7:0] \19149 ;
-    input [7:0] a;
-    input [31:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19149  = b[7:0];
-      4'b??1?:
-        \19149  = b[15:8];
-      4'b?1??:
-        \19149  = b[23:16];
-      4'b1???:
-        \19149  = b[31:24];
-      default:
-        \19149  = a;
-    endcase
-  endfunction
-  assign _391_ = \19149 (8'hxx, { _437_[262:255], _359_, _437_[262:255], _231_[132:125] }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19152 ;
+  assign _377_ = \19146 (1'hx, { _376_, _376_, _376_, 1'h1 }, { _372_, _360_, _320_, _274_ });
+  assign _378_ = _437_[154] ? 1'h1 : 1'h0;
+  function [0:0] \19151 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19152  = b[0:0];
+        \19151  = b[0:0];
       4'b??1?:
-        \19152  = b[1:1];
+        \19151  = b[1:1];
       4'b?1??:
-        \19152  = b[2:2];
+        \19151  = b[2:2];
       4'b1???:
-        \19152  = b[3:3];
+        \19151  = b[3:3];
       default:
-        \19152  = a;
+        \19151  = a;
     endcase
   endfunction
-  assign _392_ = \19152 (1'hx, { _437_[263], _437_[263], _437_[263], _267_ }, { _372_, _360_, _317_, _271_ });
-  function [48:0] \19155 ;
-    input [48:0] a;
-    input [195:0] b;
+  assign _379_ = \19151 (1'hx, { _378_, _378_, wishbone_in[64], _378_ }, { _372_, _360_, _320_, _274_ });
+  function [8:0] \19156 ;
+    input [8:0] a;
+    input [35:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19155  = b[48:0];
+        \19156  = b[8:0];
       4'b??1?:
-        \19155  = b[97:49];
+        \19156  = b[17:9];
       4'b?1??:
-        \19155  = b[146:98];
+        \19156  = b[26:18];
       4'b1???:
-        \19155  = b[195:147];
+        \19156  = b[35:27];
       default:
-        \19155  = a;
+        \19156  = a;
     endcase
   endfunction
-  assign _393_ = \19155 (49'hxxxxxxxxxxxxx, { _437_[312:264], _437_[312:264], _437_[312:264], _231_[60:12] }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19157 ;
-    input [0:0] a;
-    input [3:0] b;
+  assign _380_ = \19156 (9'hxxx, { _367_[8:0], _202_, use_forward1_next, _313_[8:0], _202_, use_forward1_next }, { _372_, _360_, _320_, _274_ });
+  function [1:0] \19160 ;
+    input [1:0] a;
+    input [7:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19157  = b[0:0];
+        \19160  = b[1:0];
       4'b??1?:
-        \19157  = b[1:1];
+        \19160  = b[3:2];
       4'b?1??:
-        \19157  = b[2:2];
+        \19160  = b[5:4];
       4'b1???:
-        \19157  = b[3:3];
-      default:
-        \19157  = a;
-    endcase
-  endfunction
-  assign _394_ = \19157 (1'hx, { _215_, _215_, _215_, _234_ }, { _372_, _360_, _317_, _271_ });
-  function [3:0] \19160 ;
-    input [3:0] a;
-    input [15:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19160  = b[3:0];
-      4'b??1?:
-        \19160  = b[7:4];
-      4'b?1??:
-        \19160  = b[11:8];
-      4'b1???:
-        \19160  = b[15:12];
+        \19160  = b[7:6];
       default:
         \19160  = a;
     endcase
   endfunction
-  assign _395_ = \19160 (4'hx, { _437_[317:314], _437_[317:314], _313_, _231_[11:8] }, { _372_, _360_, _317_, _271_ });
+  assign _381_ = \19160 (2'hx, { _367_[10:9], _355_, _313_[10:9], _264_ }, { _372_, _360_, _320_, _274_ });
   function [0:0] \19163 ;
     input [0:0] a;
     input [3:0] b;
@@ -1863,26 +1598,45 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
         \19163  = a;
     endcase
   endfunction
-  assign _396_ = \19163 (1'hx, { _437_[318], _437_[318], _437_[318], _231_[11] }, { _372_, _360_, _317_, _271_ });
-  function [2:0] \19166 ;
-    input [2:0] a;
-    input [11:0] b;
+  assign _382_ = \19163 (1'hx, { _437_[153], _437_[153], _437_[153], _234_[4] }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19165 ;
+    input [0:0] a;
+    input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19166  = b[2:0];
+        \19165  = b[0:0];
       4'b??1?:
-        \19166  = b[5:3];
+        \19165  = b[1:1];
       4'b?1??:
-        \19166  = b[8:6];
+        \19165  = b[2:2];
       4'b1???:
-        \19166  = b[11:9];
+        \19165  = b[3:3];
       default:
-        \19166  = a;
+        \19165  = a;
     endcase
   endfunction
-  assign _397_ = \19166 (3'hx, { _437_[321:319], _437_[321:319], _437_[321:319], _232_ }, { _372_, _360_, _317_, _271_ });
+  assign _383_ = \19165 (1'hx, { 1'h0, _337_, 1'h0, _265_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19167 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19167  = b[0:0];
+      4'b??1?:
+        \19167  = b[1:1];
+      4'b?1??:
+        \19167  = b[2:2];
+      4'b1???:
+        \19167  = b[3:3];
+      default:
+        \19167  = a;
+    endcase
+  endfunction
+  assign _384_ = \19167 (1'hx, { _217_, _217_, _217_, _266_ }, { _372_, _360_, _320_, _274_ });
   function [0:0] \19170 ;
     input [0:0] a;
     input [3:0] b;
@@ -1901,178 +1655,159 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
         \19170  = a;
     endcase
   endfunction
-  assign _398_ = \19170 (1'hx, { _437_[322], _437_[322], _314_[0], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19174 ;
+  assign _385_ = \19170 (1'hx, { _368_, _347_[0], _301_, _267_ }, { _372_, _360_, _320_, _274_ });
+  function [6:0] \19176 ;
+    input [6:0] a;
+    input [27:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19176  = b[6:0];
+      4'b??1?:
+        \19176  = b[13:7];
+      4'b?1??:
+        \19176  = b[20:14];
+      4'b1???:
+        \19176  = b[27:21];
+      default:
+        \19176  = a;
+    endcase
+  endfunction
+  assign _386_ = \19176 (7'hxx, { _437_[163:157], _347_[7:1], _283_[6:0], _234_[11:5] }, { _372_, _360_, _320_, _274_ });
+  function [24:0] \19181 ;
+    input [24:0] a;
+    input [99:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19181  = b[24:0];
+      4'b??1?:
+        \19181  = b[49:25];
+      4'b?1??:
+        \19181  = b[74:50];
+      4'b1???:
+        \19181  = b[99:75];
+      default:
+        \19181  = a;
+    endcase
+  endfunction
+  assign _387_ = \19181 (25'hxxxxxxx, { _437_[188:164], _437_[188:164], _283_[31:7], _234_[36:12] }, { _372_, _360_, _320_, _274_ });
+  function [63:0] \19185 ;
+    input [63:0] a;
+    input [255:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19185  = b[63:0];
+      4'b??1?:
+        \19185  = b[127:64];
+      4'b?1??:
+        \19185  = b[191:128];
+      4'b1???:
+        \19185  = b[255:192];
+      default:
+        \19185  = a;
+    endcase
+  endfunction
+  assign _388_ = \19185 (64'hxxxxxxxxxxxxxxxx, { _437_[252:189], _329_[63:0], _437_[252:189], _234_[124:61] }, { _372_, _360_, _320_, _274_ });
+  function [7:0] \19189 ;
+    input [7:0] a;
+    input [31:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19189  = b[7:0];
+      4'b??1?:
+        \19189  = b[15:8];
+      4'b?1??:
+        \19189  = b[23:16];
+      4'b1???:
+        \19189  = b[31:24];
+      default:
+        \19189  = a;
+    endcase
+  endfunction
+  assign _389_ = \19189 (8'hxx, { _437_[260:253], _329_[71:64], _437_[260:253], _234_[132:125] }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19193 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19174  = b[0:0];
+        \19193  = b[0:0];
       4'b??1?:
-        \19174  = b[1:1];
+        \19193  = b[1:1];
       4'b?1??:
-        \19174  = b[2:2];
+        \19193  = b[2:2];
       4'b1???:
-        \19174  = b[3:3];
+        \19193  = b[3:3];
       default:
-        \19174  = a;
+        \19193  = a;
     endcase
   endfunction
-  assign _399_ = \19174 (1'hx, { _437_[323], _437_[323], _314_[1], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19178 ;
+  assign _390_ = \19193 (1'hx, { _369_[0], _358_[0], _309_, _268_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19197 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19178  = b[0:0];
+        \19197  = b[0:0];
       4'b??1?:
-        \19178  = b[1:1];
+        \19197  = b[1:1];
       4'b?1??:
-        \19178  = b[2:2];
+        \19197  = b[2:2];
       4'b1???:
-        \19178  = b[3:3];
+        \19197  = b[3:3];
       default:
-        \19178  = a;
+        \19197  = a;
     endcase
   endfunction
-  assign _400_ = \19178 (1'hx, { _437_[324], _437_[324], _314_[2], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19182 ;
+  assign _391_ = \19197 (1'hx, { _369_[1], _358_[1], _280_, _269_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19200 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19182  = b[0:0];
+        \19200  = b[0:0];
       4'b??1?:
-        \19182  = b[1:1];
+        \19200  = b[1:1];
       4'b?1??:
-        \19182  = b[2:2];
+        \19200  = b[2:2];
       4'b1???:
-        \19182  = b[3:3];
+        \19200  = b[3:3];
       default:
-        \19182  = a;
+        \19200  = a;
     endcase
   endfunction
-  assign _401_ = \19182 (1'hx, { _437_[325], _437_[325], _314_[3], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19186 ;
-    input [0:0] a;
-    input [3:0] b;
+  assign _392_ = \19200 (1'hx, { _437_[263], _437_[263], _437_[263], _270_ }, { _372_, _360_, _320_, _274_ });
+  function [48:0] \19203 ;
+    input [48:0] a;
+    input [195:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19186  = b[0:0];
+        \19203  = b[48:0];
       4'b??1?:
-        \19186  = b[1:1];
+        \19203  = b[97:49];
       4'b?1??:
-        \19186  = b[2:2];
+        \19203  = b[146:98];
       4'b1???:
-        \19186  = b[3:3];
-      default:
-        \19186  = a;
-    endcase
-  endfunction
-  assign _402_ = \19186 (1'hx, { _437_[326], _437_[326], _314_[4], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19190 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19190  = b[0:0];
-      4'b??1?:
-        \19190  = b[1:1];
-      4'b?1??:
-        \19190  = b[2:2];
-      4'b1???:
-        \19190  = b[3:3];
-      default:
-        \19190  = a;
-    endcase
-  endfunction
-  assign _403_ = \19190 (1'hx, { _437_[327], _437_[327], _314_[5], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19194 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19194  = b[0:0];
-      4'b??1?:
-        \19194  = b[1:1];
-      4'b?1??:
-        \19194  = b[2:2];
-      4'b1???:
-        \19194  = b[3:3];
-      default:
-        \19194  = a;
-    endcase
-  endfunction
-  assign _404_ = \19194 (1'hx, { _437_[328], _437_[328], _314_[6], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19198 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19198  = b[0:0];
-      4'b??1?:
-        \19198  = b[1:1];
-      4'b?1??:
-        \19198  = b[2:2];
-      4'b1???:
-        \19198  = b[3:3];
-      default:
-        \19198  = a;
-    endcase
-  endfunction
-  assign _405_ = \19198 (1'hx, { _437_[329], _437_[329], _314_[7], 1'h0 }, { _372_, _360_, _317_, _271_ });
-  function [2:0] \19201 ;
-    input [2:0] a;
-    input [11:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19201  = b[2:0];
-      4'b??1?:
-        \19201  = b[5:3];
-      4'b?1??:
-        \19201  = b[8:6];
-      4'b1???:
-        \19201  = b[11:9];
-      default:
-        \19201  = a;
-    endcase
-  endfunction
-  assign _406_ = \19201 (3'hx, { _437_[332:330], _323_, _437_[332:330], _268_ }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19203 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        \19203  = b[0:0];
-      4'b??1?:
-        \19203  = b[1:1];
-      4'b?1??:
-        \19203  = b[2:2];
-      4'b1???:
-        \19203  = b[3:3];
+        \19203  = b[195:147];
       default:
         \19203  = a;
     endcase
   endfunction
-  assign _407_ = \19203 (1'hx, { 1'h0, _340_, 2'h0 }, { _372_, _360_, _317_, _271_ });
+  assign _393_ = \19203 (49'hxxxxxxxxxxxxx, { _437_[312:264], _437_[312:264], _437_[312:264], _234_[60:12] }, { _372_, _360_, _320_, _274_ });
   function [0:0] \19205 ;
     input [0:0] a;
     input [3:0] b;
@@ -2091,69 +1826,335 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
         \19205  = a;
     endcase
   endfunction
-  assign _408_ = \19205 (1'hx, { 1'h0, _358_, 2'h0 }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19207 ;
+  assign _394_ = \19205 (1'hx, { _218_, _218_, _218_, _237_ }, { _372_, _360_, _320_, _274_ });
+  function [3:0] \19208 ;
+    input [3:0] a;
+    input [15:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19208  = b[3:0];
+      4'b??1?:
+        \19208  = b[7:4];
+      4'b?1??:
+        \19208  = b[11:8];
+      4'b1???:
+        \19208  = b[15:12];
+      default:
+        \19208  = a;
+    endcase
+  endfunction
+  assign _395_ = \19208 (4'hx, { _437_[317:314], _437_[317:314], _316_, _234_[11:8] }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19211 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19207  = b[0:0];
+        \19211  = b[0:0];
       4'b??1?:
-        \19207  = b[1:1];
+        \19211  = b[1:1];
       4'b?1??:
-        \19207  = b[2:2];
+        \19211  = b[2:2];
       4'b1???:
-        \19207  = b[3:3];
+        \19211  = b[3:3];
       default:
-        \19207  = a;
+        \19211  = a;
     endcase
   endfunction
-  assign _409_ = \19207 (1'hx, { _364_, _341_, _294_, _269_ }, { _372_, _360_, _317_, _271_ });
-  function [0:0] \19209 ;
+  assign _396_ = \19211 (1'hx, { _437_[318], _437_[318], _437_[318], _234_[11] }, { _372_, _360_, _320_, _274_ });
+  function [2:0] \19214 ;
+    input [2:0] a;
+    input [11:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19214  = b[2:0];
+      4'b??1?:
+        \19214  = b[5:3];
+      4'b?1??:
+        \19214  = b[8:6];
+      4'b1???:
+        \19214  = b[11:9];
+      default:
+        \19214  = a;
+    endcase
+  endfunction
+  assign _397_ = \19214 (3'hx, { _437_[321:319], _437_[321:319], _437_[321:319], _235_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19218 ;
     input [0:0] a;
     input [3:0] b;
     input [3:0] s;
     (* parallel_case *)
     casez (s)
       4'b???1:
-        \19209  = b[0:0];
+        \19218  = b[0:0];
       4'b??1?:
-        \19209  = b[1:1];
+        \19218  = b[1:1];
       4'b?1??:
-        \19209  = b[2:2];
+        \19218  = b[2:2];
       4'b1???:
-        \19209  = b[3:3];
+        \19218  = b[3:3];
       default:
-        \19209  = a;
+        \19218  = a;
     endcase
   endfunction
-  assign _410_ = \19209 (1'hx, { _371_, _211_, _300_, _270_ }, { _372_, _360_, _317_, _271_ });
-  assign _411_ = _228_ ? r0[146] : _436_[135];
+  assign _398_ = \19218 (1'hx, { _437_[322], _437_[322], _317_[0], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19222 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19222  = b[0:0];
+      4'b??1?:
+        \19222  = b[1:1];
+      4'b?1??:
+        \19222  = b[2:2];
+      4'b1???:
+        \19222  = b[3:3];
+      default:
+        \19222  = a;
+    endcase
+  endfunction
+  assign _399_ = \19222 (1'hx, { _437_[323], _437_[323], _317_[1], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19226 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19226  = b[0:0];
+      4'b??1?:
+        \19226  = b[1:1];
+      4'b?1??:
+        \19226  = b[2:2];
+      4'b1???:
+        \19226  = b[3:3];
+      default:
+        \19226  = a;
+    endcase
+  endfunction
+  assign _400_ = \19226 (1'hx, { _437_[324], _437_[324], _317_[2], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19230 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19230  = b[0:0];
+      4'b??1?:
+        \19230  = b[1:1];
+      4'b?1??:
+        \19230  = b[2:2];
+      4'b1???:
+        \19230  = b[3:3];
+      default:
+        \19230  = a;
+    endcase
+  endfunction
+  assign _401_ = \19230 (1'hx, { _437_[325], _437_[325], _317_[3], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19234 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19234  = b[0:0];
+      4'b??1?:
+        \19234  = b[1:1];
+      4'b?1??:
+        \19234  = b[2:2];
+      4'b1???:
+        \19234  = b[3:3];
+      default:
+        \19234  = a;
+    endcase
+  endfunction
+  assign _402_ = \19234 (1'hx, { _437_[326], _437_[326], _317_[4], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19238 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19238  = b[0:0];
+      4'b??1?:
+        \19238  = b[1:1];
+      4'b?1??:
+        \19238  = b[2:2];
+      4'b1???:
+        \19238  = b[3:3];
+      default:
+        \19238  = a;
+    endcase
+  endfunction
+  assign _403_ = \19238 (1'hx, { _437_[327], _437_[327], _317_[5], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19242 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19242  = b[0:0];
+      4'b??1?:
+        \19242  = b[1:1];
+      4'b?1??:
+        \19242  = b[2:2];
+      4'b1???:
+        \19242  = b[3:3];
+      default:
+        \19242  = a;
+    endcase
+  endfunction
+  assign _404_ = \19242 (1'hx, { _437_[328], _437_[328], _317_[6], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19246 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19246  = b[0:0];
+      4'b??1?:
+        \19246  = b[1:1];
+      4'b?1??:
+        \19246  = b[2:2];
+      4'b1???:
+        \19246  = b[3:3];
+      default:
+        \19246  = a;
+    endcase
+  endfunction
+  assign _405_ = \19246 (1'hx, { _437_[329], _437_[329], _317_[7], 1'h0 }, { _372_, _360_, _320_, _274_ });
+  function [2:0] \19249 ;
+    input [2:0] a;
+    input [11:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19249  = b[2:0];
+      4'b??1?:
+        \19249  = b[5:3];
+      4'b?1??:
+        \19249  = b[8:6];
+      4'b1???:
+        \19249  = b[11:9];
+      default:
+        \19249  = a;
+    endcase
+  endfunction
+  assign _406_ = \19249 (3'hx, { _437_[332:330], _326_, _437_[332:330], _271_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19251 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19251  = b[0:0];
+      4'b??1?:
+        \19251  = b[1:1];
+      4'b?1??:
+        \19251  = b[2:2];
+      4'b1???:
+        \19251  = b[3:3];
+      default:
+        \19251  = a;
+    endcase
+  endfunction
+  assign _407_ = \19251 (1'hx, { 1'h0, _342_, 2'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19253 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19253  = b[0:0];
+      4'b??1?:
+        \19253  = b[1:1];
+      4'b?1??:
+        \19253  = b[2:2];
+      4'b1???:
+        \19253  = b[3:3];
+      default:
+        \19253  = a;
+    endcase
+  endfunction
+  assign _408_ = \19253 (1'hx, { 1'h0, _359_, 2'h0 }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19255 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19255  = b[0:0];
+      4'b??1?:
+        \19255  = b[1:1];
+      4'b?1??:
+        \19255  = b[2:2];
+      4'b1???:
+        \19255  = b[3:3];
+      default:
+        \19255  = a;
+    endcase
+  endfunction
+  assign _409_ = \19255 (1'hx, { _364_, _343_, _297_, _272_ }, { _372_, _360_, _320_, _274_ });
+  function [0:0] \19257 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    (* parallel_case *)
+    casez (s)
+      4'b???1:
+        \19257  = b[0:0];
+      4'b??1?:
+        \19257  = b[1:1];
+      4'b?1??:
+        \19257  = b[2:2];
+      4'b1???:
+        \19257  = b[3:3];
+      default:
+        \19257  = a;
+    endcase
+  endfunction
+  assign _410_ = \19257 (1'hx, { _371_, _214_, _303_, _273_ }, { _372_, _360_, _320_, _274_ });
+  assign _411_ = _231_ ? r0[146] : _436_[135];
   assign _412_ = _435_ ? _436_[135] : _411_;
-  assign _413_ = _228_ ? { req_hit_way, _221_, _217_, ra, r0[2], req_go, req_op } : _436_[133:0];
+  assign _413_ = _231_ ? { req_hit_way, _224_, _220_, ra, r0[2], req_go, req_op } : _436_[133:0];
   assign _414_ = _435_ ? _436_[133:0] : _413_;
   assign _415_ = rst ? 4'h0 : _373_;
   assign _416_ = rst ? 1'h0 : _374_;
   assign _417_ = rst ? _436_ : { _412_, _377_, _414_ };
   assign _418_ = _437_[154] ? 1'h1 : 1'h0;
   assign _419_ = rst ? _418_ : _379_;
-  assign _420_ = rst ? { _199_, use_forward1_next } : _380_;
+  assign _420_ = rst ? { _202_, use_forward1_next } : _380_;
   assign _421_ = rst ? 2'h0 : _381_;
   assign _422_ = rst ? _437_[155:153] : { _384_, _383_, _382_ };
   assign _423_ = rst ? 33'h000000000 : { _387_, _386_, _385_ };
-  assign _424_ = rst ? _437_[252:189] : _388_;
-  assign _425_ = rst ? 2'h0 : { _390_, _389_ };
-  assign _426_ = rst ? _437_[334:255] : { _408_, _407_, _406_, _405_, _404_, _403_, _402_, _401_, _400_, _399_, _398_, _397_, _396_, _395_, _394_, _393_, _392_, _391_ };
+  assign _424_ = rst ? _437_[260:189] : { _389_, _388_ };
+  assign _425_ = rst ? 2'h0 : { _391_, _390_ };
+  assign _426_ = rst ? _437_[334:263] : { _408_, _407_, _406_, _405_, _404_, _403_, _402_, _401_, _400_, _399_, _398_, _397_, _396_, _395_, _394_, _393_, _392_ };
   assign _427_ = rst ? 1'h0 : _409_;
   assign _428_ = rst ? 1'h0 : _410_;
   assign _429_ = _437_[154] ? { _436_[11:8], _436_[133] } : { _437_[317:314], replace_way };
   assign _430_ = _437_[154] ? _436_[132:125] : 8'hff;
   assign _431_ = ~ rst;
   assign _432_ = _431_ & _437_[155];
-  assign _433_ = _432_ & _213_;
-  assign _434_ = _432_ & _212_;
+  assign _433_ = _432_ & _216_;
+  assign _434_ = _432_ & _215_;
   always @(posedge clk)
     cache_valids <= _415_;
   always @(posedge clk)
@@ -2161,65 +2162,65 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   always @(posedge clk)
     _436_ <= _417_;
   always @(posedge clk)
-    _437_ <= { _427_, _426_, _425_, _424_, _423_, _422_, _421_, _420_, _429_, _419_, _430_, _437_[63:0], _201_ };
+    _437_ <= { _427_, _426_, _425_, _424_, _423_, _422_, _421_, _420_, _429_, _419_, _430_, _437_[63:0], _204_ };
   always @(posedge clk)
     _438_ <= _428_;
   assign _445_ = _013_ ? dtlb_valids[3:2] : dtlb_valids[1:0];
   assign _446_ = tlb_hit_way ? tlb_pte_way[127:64] : tlb_pte_way[63:0];
-  assign _447_ = ~ _028_;
+  assign _447_ = ~ _030_;
   assign _448_ = ~ tlb_hit_way;
   assign _449_ = _447_ & _448_;
   assign _450_ = _447_ & tlb_hit_way;
-  assign _451_ = _028_ & _448_;
-  assign _452_ = _028_ & tlb_hit_way;
+  assign _451_ = _030_ & _448_;
+  assign _452_ = _030_ & tlb_hit_way;
   assign _453_ = _449_ ? 1'h0 : dtlb_valids[0];
   assign _454_ = _450_ ? 1'h0 : dtlb_valids[1];
   assign _455_ = _451_ ? 1'h0 : dtlb_valids[2];
   assign _456_ = _452_ ? 1'h0 : dtlb_valids[3];
-  assign _457_ = _030_ ? \maybe_tlb_plrus.tlb_plrus:0.tlb_plru_out  : \maybe_tlb_plrus.tlb_plrus:1.tlb_plru_out ;
-  assign _458_ = ~ _031_;
+  assign _457_ = _032_ ? \maybe_tlb_plrus.tlb_plrus:0.tlb_plru_out  : \maybe_tlb_plrus.tlb_plrus:1.tlb_plru_out ;
+  assign _458_ = ~ _033_;
   assign _459_ = _458_ ? r0[70:20] : tlb_tag_way[50:0];
-  assign _460_ = _031_ ? r0[70:20] : tlb_tag_way[101:51];
-  assign _461_ = ~ _031_;
+  assign _460_ = _033_ ? r0[70:20] : tlb_tag_way[101:51];
+  assign _461_ = ~ _033_;
   assign _462_ = _461_ ? r0[134:71] : tlb_pte_way[63:0];
-  assign _463_ = _031_ ? r0[134:71] : tlb_pte_way[127:64];
-  assign _464_ = ~ _032_;
-  assign _465_ = ~ _031_;
+  assign _463_ = _033_ ? r0[134:71] : tlb_pte_way[127:64];
+  assign _464_ = ~ _034_;
+  assign _465_ = ~ _033_;
   assign _466_ = _464_ & _465_;
-  assign _467_ = _464_ & _031_;
-  assign _468_ = _032_ & _465_;
-  assign _469_ = _032_ & _031_;
+  assign _467_ = _464_ & _033_;
+  assign _468_ = _034_ & _465_;
+  assign _469_ = _034_ & _033_;
   assign _470_ = _466_ ? 1'h1 : dtlb_valids[0];
   assign _471_ = _467_ ? 1'h1 : dtlb_valids[1];
   assign _472_ = _468_ ? 1'h1 : dtlb_valids[2];
   assign _473_ = _469_ ? 1'h1 : dtlb_valids[3];
-  assign _474_ = _052_ ? cache_valids[2] : cache_valids[0];
-  assign _475_ = _059_ ? cache_valids[3] : cache_valids[1];
-  assign _476_ = _068_ ? cache_valids[2] : cache_valids[0];
-  assign _477_ = _075_ ? cache_valids[3] : cache_valids[1];
-  assign _478_ = tlb_hit_way ? _080_ : _064_;
-  assign _479_ = _084_ ? _065_ : _081_;
-  assign _480_ = tlb_hit_way ? _083_ : _067_;
-  assign _481_ = _088_ ? cache_valids[2] : cache_valids[0];
-  assign _482_ = _093_ ? cache_valids[3] : cache_valids[1];
-  assign _485_ = _108_[2] ? _484_ : _483_;
-  assign _486_ = _117_ ? \maybe_plrus.plrus:0.plru_out  : \maybe_plrus.plrus:1.plru_out ;
-  assign _487_ = _155_ ? \rams:0.dout  : \rams:1.dout ;
-  assign _488_ = ~ _283_[2];
-  assign _489_ = ~ _283_[1];
+  assign _474_ = _054_ ? cache_valids[2] : cache_valids[0];
+  assign _475_ = _061_ ? cache_valids[3] : cache_valids[1];
+  assign _476_ = _070_ ? cache_valids[2] : cache_valids[0];
+  assign _477_ = _077_ ? cache_valids[3] : cache_valids[1];
+  assign _478_ = tlb_hit_way ? _082_ : _066_;
+  assign _479_ = _086_ ? _067_ : _083_;
+  assign _480_ = tlb_hit_way ? _085_ : _069_;
+  assign _481_ = _090_ ? cache_valids[2] : cache_valids[0];
+  assign _482_ = _095_ ? cache_valids[3] : cache_valids[1];
+  assign _485_ = _110_[2] ? _484_ : _483_;
+  assign _486_ = _119_ ? \maybe_plrus.plrus:0.plru_out  : \maybe_plrus.plrus:1.plru_out ;
+  assign _487_ = _158_ ? \rams:0.dout  : \rams:1.dout ;
+  assign _488_ = ~ _286_[2];
+  assign _489_ = ~ _286_[1];
   assign _490_ = _488_ & _489_;
-  assign _491_ = _488_ & _283_[1];
-  assign _492_ = _283_[2] & _489_;
-  assign _493_ = _283_[2] & _283_[1];
-  assign _494_ = ~ _283_[0];
+  assign _491_ = _488_ & _286_[1];
+  assign _492_ = _286_[2] & _489_;
+  assign _493_ = _286_[2] & _286_[1];
+  assign _494_ = ~ _286_[0];
   assign _495_ = _490_ & _494_;
-  assign _496_ = _490_ & _283_[0];
+  assign _496_ = _490_ & _286_[0];
   assign _497_ = _491_ & _494_;
-  assign _498_ = _491_ & _283_[0];
+  assign _498_ = _491_ & _286_[0];
   assign _499_ = _492_ & _494_;
-  assign _500_ = _492_ & _283_[0];
+  assign _500_ = _492_ & _286_[0];
   assign _501_ = _493_ & _494_;
-  assign _502_ = _493_ & _283_[0];
+  assign _502_ = _493_ & _286_[0];
   assign _503_ = _495_ ? 1'h1 : _437_[322];
   assign _504_ = _496_ ? 1'h1 : _437_[323];
   assign _505_ = _497_ ? 1'h1 : _437_[324];
@@ -2228,39 +2229,39 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   assign _508_ = _500_ ? 1'h1 : _437_[327];
   assign _509_ = _501_ ? 1'h1 : _437_[328];
   assign _510_ = _502_ ? 1'h1 : _437_[329];
-  assign _511_ = ~ _303_;
+  assign _511_ = ~ _306_;
   assign _512_ = ~ _437_[313];
   assign _513_ = _511_ & _512_;
   assign _514_ = _511_ & _437_[313];
-  assign _515_ = _303_ & _512_;
-  assign _516_ = _303_ & _437_[313];
+  assign _515_ = _306_ & _512_;
+  assign _516_ = _306_ & _437_[313];
   assign _517_ = _513_ ? 1'h1 : cache_valids[0];
   assign _518_ = _514_ ? 1'h1 : cache_valids[1];
   assign _519_ = _515_ ? 1'h1 : cache_valids[2];
   assign _520_ = _516_ ? 1'h1 : cache_valids[3];
-  plru_2 \maybe_plrus.plrus:0.plru  (
-    .acc(_195_[0]),
+  plru_1 \maybe_plrus.plrus:0.plru  (
+    .acc(_198_[0]),
     .acc_en(\maybe_plrus.plrus:0.plru_acc_en ),
     .clk(clk),
     .lru(\maybe_plrus.plrus:0.plru_out ),
     .rst(rst)
   );
-  plru_2 \maybe_plrus.plrus:1.plru  (
-    .acc(_195_[0]),
+  plru_1 \maybe_plrus.plrus:1.plru  (
+    .acc(_198_[0]),
     .acc_en(\maybe_plrus.plrus:1.plru_acc_en ),
     .clk(clk),
     .lru(\maybe_plrus.plrus:1.plru_out ),
     .rst(rst)
   );
-  plru_2 \maybe_tlb_plrus.tlb_plrus:0.tlb_plru  (
-    .acc(_195_[5]),
+  plru_1 \maybe_tlb_plrus.tlb_plrus:0.tlb_plru  (
+    .acc(_198_[5]),
     .acc_en(\maybe_tlb_plrus.tlb_plrus:0.tlb_plru_acc_en ),
     .clk(clk),
     .lru(\maybe_tlb_plrus.tlb_plrus:0.tlb_plru_out ),
     .rst(rst)
   );
-  plru_2 \maybe_tlb_plrus.tlb_plrus:1.tlb_plru  (
-    .acc(_195_[5]),
+  plru_1 \maybe_tlb_plrus.tlb_plrus:1.tlb_plru  (
+    .acc(_198_[5]),
     .acc_en(\maybe_tlb_plrus.tlb_plrus:1.tlb_plru_acc_en ),
     .clk(clk),
     .lru(\maybe_tlb_plrus.tlb_plrus:1.tlb_plru_out ),
@@ -2284,8 +2285,8 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
     .wr_data(\rams:1.wr_data ),
     .wr_sel(\rams:1.wr_sel_m )
   );
-  assign d_out = { _197_[1], _196_, _164_, _163_, _162_, _161_, _160_, _159_, _158_, _157_, _156_, _437_[335] };
-  assign m_out = { _163_, _162_, _161_, _160_, _159_, _158_, _157_, _156_, _197_[0], _438_, 1'h0 };
+  assign d_out = { _200_[1], _199_, _167_, _166_, _165_, _164_, _163_, _162_, _161_, _160_, _159_, _437_[335] };
+  assign m_out = { _166_, _165_, _164_, _163_, _162_, _161_, _160_, _159_, _200_[0], _438_, 1'h0 };
   assign stall_out = r0_stall;
   assign wishbone_out = _437_[263:157];
 endmodule
