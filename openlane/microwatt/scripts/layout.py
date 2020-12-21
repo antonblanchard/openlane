@@ -9,7 +9,7 @@ Y=1
 die_size = (2870, 3470)
 
 # Macro sizes
-dffram = (2500, 1200)
+dffram = (2500, 900)
 icache = (680, 680)
 dcache = (730, 730)
 multiply_4 = (800, 800)
@@ -17,11 +17,11 @@ regfile = (1200, 1200)
 
 # Layout
 # DFFRAM at top
-dffram1_l = (100,                           die_size[Y]-dffram[Y]-100)
+dffram1_l = (180,                           die_size[Y]-dffram[Y]-100)
 
 # Caches in the middle
 icache_l  = (100,                           die_size[Y]-icache[Y]-1400)
-dcache_l  = (die_size[X]-100-dcache[X],     die_size[Y]-dcache[Y]-1020)
+dcache_l  = (die_size[X]-100-dcache[X],     die_size[Y]-dcache[Y]-1250)
 
 # Multiply and regfile at bottom
 multiply_4_l = (100,                        100)
