@@ -40,3 +40,7 @@ one.
 Before starting flash is initialized with a hash of the offset. The test case
 then does reads at various offsets and checks if the values returned are
 correct.
+
+## memory_test
+A simple memory tester. Writes hashes of the offset of memory into memory,
+then reads them back.
