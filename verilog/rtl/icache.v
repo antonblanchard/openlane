@@ -397,7 +397,6 @@ module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i
   output [98:0] i_out;
   input inval_in;
   reg [3:0] itlb_valids;
-  output [53:0] log_out;
   input [130:0] m_in;
   wire \maybe_plrus.plrus:0.plru_acc_en ;
   wire \maybe_plrus.plrus:0.plru_out ;

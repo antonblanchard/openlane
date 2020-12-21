@@ -657,7 +657,6 @@ module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbo
   output [67:0] d_out;
   reg [3:0] dtlb_valids;
   wire [3:0] early_req_row;
-  output [19:0] log_out;
   input [131:0] m_in;
   output [66:0] m_out;
   wire \maybe_plrus.plrus:0.plru_acc_en ;
