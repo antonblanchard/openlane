@@ -32,23 +32,21 @@ set ::env(VERILOG_FILES) "\
         $script_dir/../../verilog/rtl/microwatt.v"
 
 set ::env(VERILOG_FILES_BLACKBOX) "\
-        $script_dir/../../verilog/rtl/defines.v \
-        $script_dir/../../verilog/rtl/DFFRAM.v \
-        $script_dir/../../verilog/rtl/DFFRAMBB.v \
+        $script_dir/../../verilog/rtl/RAM_512x64.v \
         $script_dir/../../verilog/rtl/register_file.v \
         $script_dir/../../verilog/rtl/multiply_4.v \
         $script_dir/../../verilog/rtl/icache.v \
         $script_dir/../../verilog/rtl/dcache.v"
 
 set ::env(EXTRA_LEFS) "\
-        $script_dir/../../lef/DFFRAM.lef \
+        $script_dir/../../lef/RAM_512x64.lef \
         $script_dir/../../lef/register_file.lef \
         $script_dir/../../lef/multiply_4.lef \
         $script_dir/../../lef/icache.lef \
         $script_dir/../../lef/dcache.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-        $script_dir/../../gds/DFFRAM.gds \
+        $script_dir/../../gds/RAM_512x64.gds \
         $script_dir/../../gds/register_file.gds \
         $script_dir/../../gds/multiply_4.gds \
         $script_dir/../../gds/icache.gds \
