@@ -53,7 +53,7 @@ set ::env(EXTRA_GDS_FILES) "\
         $script_dir/../../gds/dcache.gds"
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 2900 3500"
+set ::env(DIE_AREA) "0 0 2870 3470"
 
 # Tune
 #set ::env(FP_CORE_UTIL) 35
@@ -73,9 +73,9 @@ set ::env(DIE_AREA) "0 0 2900 3500"
 
 ###set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
-###set ::env(PL_OPENPHYSYN_OPTIMIZATIONS) 0
+# Disable for now
+set ::env(PL_OPENPHYSYN_OPTIMIZATIONS) 0
 
-###set ::env(DESIGN_IS_CORE) 0
 ###set ::env(FP_PDN_CORE_RING) 0
 ###set ::env(GLB_RT_MAXLAYER) 5
 
@@ -83,15 +83,14 @@ set ::env(DIE_AREA) "0 0 2900 3500"
 
 set ::env(ROUTING_CORES) 8
 
-
 set ::env(DESIGN_IS_CORE) 0
 set ::env(FP_PDN_CORE_RING) 0
 set ::env(GLB_RT_MAXLAYER) 5
 set ::env(GLB_RT_ADJUSTMENT) 0.1
 set ::env(SYNTH_STRATEGY) 2
 set ::env(SYNTH_MAX_FANOUT) 6
-set ::env(FP_CORE_UTIL) 25
+set ::env(FP_CORE_UTIL) 15
 set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
-set ::env(CELL_PAD) 4
+set ::env(CELL_PAD) 8
 
 #set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
