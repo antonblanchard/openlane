@@ -122,27 +122,18 @@ module user_proj_example (
       end
    end
 
-   // JTAG pin 14-17
+   // UART pins 5-6 shared with management soc
+   assign uart0_rxd = io_in[5];
+   assign io_out[5] = 0; // don't care
+   assign io_oeb[5] = 1; // input
 
-   // assign unused  = io_in[14];
-   assign io_out[14] = jtag_tdo;
-   assign io_oeb[14] = rst; // output
+   // assign unused  = io_in[6];
+   assign io_out[6] = uart0_txd;
+   assign io_oeb[6] = rst;
 
-   assign jtag_tms = io_in[15];
-   assign io_out[15] = 0; // don't care
-   assign io_oeb[15] = 1; // input
+   // 7 unused
 
-   assign jtag_tck = io_in[16];
-   assign io_out[16] = 0; // don't care
-   assign io_oeb[16] = 1; // input
-
-   assign jtag_tdi = io_in[17];
-   assign io_out[17] = 0; // don't care
-   assign io_oeb[17] = 1; // input
-
-   assign jtag_trst = rst;
-
-   // SPI
+   // SPI pins 8-13
    // assign unused  = io_in[8];
    assign io_out[8] = spi_flash_cs_n; //(polarity??)
    assign io_oeb[8] = rst; // output
@@ -167,16 +158,26 @@ module user_proj_example (
    assign spi_flash_i[2] = io_in[12];
    assign spi_flash_i[3] = io_in[13];
 
-   // UART pin 5 6 as assigned
-   assign uart0_rxd = io_in[5];
-   assign io_out[5] = 0; // don't care
-   assign io_oeb[5] = 1; // input
+   // JTAG pins 14-17
+   // assign unused  = io_in[14];
+   assign io_out[14] = jtag_tdo;
+   assign io_oeb[14] = rst; // output
 
-   // assign unused  = io_in[6];
-   assign io_out[6] = uart0_txd;
-   assign io_oeb[6] = rst;
+   assign jtag_tms = io_in[15];
+   assign io_out[15] = 0; // don't care
+   assign io_oeb[15] = 1; // input
 
-   // bill's bus 18-36 -> 18-27 outputs, 28-36 inputs
+   assign jtag_tck = io_in[16];
+   assign io_out[16] = 0; // don't care
+   assign io_oeb[16] = 1; // input
+
+   assign jtag_tdi = io_in[17];
+   assign io_out[17] = 0; // don't care
+   assign io_oeb[17] = 1; // input
+
+   assign jtag_trst = rst;
+
+   // external bus pins 18-36 -> 18-27 outputs, 28-36 inputs
    //assign =  in[18:27] = rst; don't care
    assign io_oeb[27:18] = {10{rst}}; // outputs
    assign io_out[18] = oib_clk;
@@ -187,6 +188,8 @@ module user_proj_example (
    assign io_oeb[36:28] = {9{1'b0}}; // input
    assign ib_data = io_in[35:28];
    assign ib_pty = io_in[36];
+
+   // 37 unused
 
    assign la_data_out[31:0] = logic_analyzero[31:0];
    assign logic_analyzeri[31:0] = la_data_in[63:32];
