@@ -10,7 +10,7 @@ set ::env(CLOCK_PERIOD) "20"
 set ::env(CLOCK_NET) $::env(CLOCK_PORT)
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 1200 1200"
+set ::env(DIE_AREA) "0 0 1100 1100"
 
 # Settings for macros
 set ::env(DESIGN_IS_CORE) 0
