@@ -17,6 +17,11 @@ set ::env(DESIGN_IS_CORE) 0
 set ::env(FP_PDN_CORE_RING) 0
 set ::env(GLB_RT_MAXLAYER) 5
 
+# Handle PDN
+set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
+set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
+set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
+
 # Tuning
 set ::env(GLB_RT_ADJUSTMENT) 0.1
 set ::env(SYNTH_STRATEGY) 2
