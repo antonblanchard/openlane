@@ -66,7 +66,7 @@ void main(void)
 	// Take microwatt out of reset
 	reg_la2_data &= ~0x00000002;
 
-	while (reg_la0_data != LA_MICROWATT_START)
+	while ((reg_la0_data != LA_MICROWATT_START) && (reg_la0_data != LA_MICROWATT_SUCCESS))
 		/* Do Nothing */ ;
 
 	// Signal to TB that microwatt is alive
