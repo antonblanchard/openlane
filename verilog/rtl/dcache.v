@@ -122,7 +122,21 @@ module cache_ram_4_64_3f29546453678b855931c174a97d6c0894b8f546(clk, rd_en, rd_ad
   assign rd_data = _00_;
 endmodule
 
-module dcache(clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbone_out);
+module dcache(
+`ifdef USE_POWER_PINS
+	vdda1, vdda2, vssa1, vssa2, vccd1, vccd2, vssd1, vssd2,
+`endif
+	clk, rst, d_in, m_in, wishbone_in, d_out, m_out, stall_out, wishbone_out);
+`ifdef USE_POWER_PINS
+  inout vdda1;
+  inout vdda2;
+  inout vssa1;
+  inout vssa2;
+  inout vccd1;
+  inout vccd2;
+  inout vssd1;
+  inout vssd2;
+`endif
   wire _000_;
   wire _001_;
   wire [146:0] _002_;

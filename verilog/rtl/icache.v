@@ -119,7 +119,22 @@ module cache_ram_4_64_1489f923c4dca729178b3e3233458550d8dddf29(clk, rd_en, rd_ad
   assign rd_data = { _15_, _13_, _11_, _09_, _07_, _05_, _03_, _01_ };
 endmodule
 
-module icache(clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i_out, stall_out, wishbone_out);
+module icache(
+`ifdef USE_POWER_PINS
+	vdda1, vdda2, vssa1, vssa2, vccd1, vccd2, vssd1, vssd2,
+`endif
+	clk, rst, i_in, m_in, stall_in, flush_in, inval_in, wishbone_in, i_out, stall_out, wishbone_out);
+`ifdef USE_POWER_PINS
+  inout vdda1;
+  inout vdda2;
+  inout vssa1;
+  inout vssa2;
+  inout vccd1;
+  inout vccd2;
+  inout vssd1;
+  inout vssd2;
+`endif
+
   wire _000_;
   wire _001_;
   wire _002_;
