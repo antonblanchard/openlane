@@ -25,12 +25,12 @@ set ::env(DESIGN_NAME) user_project_wrapper
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
 	$script_dir/../../verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_project_wrapper.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/microwatt.v \
+	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
 # Should we switch to independent clock?
-set ::env(CLOCK_PORT) "mprj.clk"
+set ::env(CLOCK_PORT) "microwatt_0.ext_clk"
 set ::env(CLOCK_NET) $::env(CLOCK_PORT)
 
 set ::env(CLOCK_PERIOD) "20"
@@ -77,8 +77,8 @@ set ::env(PL_OPENPHYSYN_OPTIMIZATIONS) 0
 set ::env(GLB_RT_ADJUSTMENT) 0.1
 set ::env(SYNTH_STRATEGY) 2
 set ::env(SYNTH_MAX_FANOUT) 8
-set ::env(PL_TARGET_DENSITY) 0.25
-set ::env(CELL_PAD) 6
+set ::env(PL_TARGET_DENSITY) 0.20
+set ::env(CELL_PAD) 4
 
 set ::env(ROUTING_CORES) 8
 
