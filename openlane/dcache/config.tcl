@@ -10,7 +10,7 @@ set ::env(CLOCK_PERIOD) "20"
 set ::env(CLOCK_NET) $::env(CLOCK_PORT)
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 730 730"
+set ::env(DIE_AREA) "0 0 720 720"
 
 # Settings for macros
 set ::env(DESIGN_IS_CORE) 0
@@ -26,8 +26,8 @@ set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
 set ::env(GLB_RT_ADJUSTMENT) 0.15
 set ::env(SYNTH_STRATEGY) 2
 set ::env(SYNTH_MAX_FANOUT) 6
-set ::env(PL_TARGET_DENSITY) 0.55
-set ::env(CELL_PAD) 5
+set ::env(PL_TARGET_DENSITY) 0.60
+#set ::env(CELL_PAD) 4
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
