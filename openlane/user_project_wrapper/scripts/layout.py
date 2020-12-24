@@ -7,16 +7,16 @@ Y=1
 die_size   = (2920, 3520)
 
 # Macro sizes
-dffram     = (2500,  900)
-icache     = ( 680,  680)
-dcache     = ( 730,  730)
+dffram     = (2800,  800)
+icache     = ( 660,  660)
+dcache     = ( 720,  720)
 multiply_4 = ( 800,  800)
-regfile    = (1000, 1000)
+regfile    = ( 980,  980)
 
 # Macro layout
 
 # DFFRAM at top
-dffram1_l    = (180,                          die_size[Y]-dffram[Y]-50)
+dffram1_l    = (60,                          die_size[Y]-dffram[Y]-50)
 
 # Caches in the middle
 icache_l     = (50,                           die_size[Y]-icache[Y]-1400)
