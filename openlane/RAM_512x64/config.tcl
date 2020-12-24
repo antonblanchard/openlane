@@ -14,14 +14,11 @@ set ::env(CLOCK_NET) $::env(CLOCK_PORT)
 # Not sure why we disable this
 set ::env(CLOCK_TREE_SYNTH) 0
 
-# Do we need this, considering we set GLB_RT_MAXLAYER?
-set ::env(GLB_RT_OBS) "met5 $::env(DIE_AREA)"
-
 # Required because we are using standard cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 2500 900"
+set ::env(DIE_AREA) "0 0 2800 800"
 
 # Settings for macros
 set ::env(DESIGN_IS_CORE) 0
