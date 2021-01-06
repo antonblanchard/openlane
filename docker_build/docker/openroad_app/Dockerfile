@@ -12,31 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM centos:centos7 AS base-dependencies
+FROM openlane-base-build AS base-dependencies
 
-# Install Development Environment
-RUN yum groupinstall -y "Development Tools"
-RUN yum group install -y "Development Tools" \
-    && yum install -y https://repo.ius.io/ius-release-el7.rpm \
-    && yum install -y centos-release-scl \
-    && yum install -y wget devtoolset-8 \
-    devtoolset-8-libatomic-devel tcl-devel tcl tk libstdc++ tk-devel pcre-devel \
-    python36u python36u-libs python36u-devel python36u-pip && \
-    yum clean -y all && \
-    rm -rf /var/lib/apt/lists/*
-
-# centos7 doesn't set the PATH automatically for the installed gcc from dev tools
-ENV CC=/opt/rh/devtoolset-8/root/usr/bin/gcc \
-    CPP=/opt/rh/devtoolset-8/root/usr/bin/cpp \
-    CXX=/opt/rh/devtoolset-8/root/usr/bin/g++ \
-    PATH=/opt/rh/devtoolset-8/root/usr/bin:$PATH \
-    LD_LIBRARY_PATH=/opt/rh/devtoolset-8/root/usr/lib64:/opt/rh/devtoolset-8/root/usr/lib:/opt/rh/devtoolset-8/root/usr/lib64/dyninst:/opt/rh/devtoolset-8/root/usr/lib/dyninst:/opt/rh/devtoolset-8/root/usr/lib64:/opt/rh/devtoolset-8/root/usr/lib:$LD_LIBRARY_PATH
-
-# install cmake
-RUN wget https://cmake.org/files/v3.14/cmake-3.14.0-Linux-x86_64.sh && \
-    chmod +x cmake-3.14.0-Linux-x86_64.sh  && \
-    ./cmake-3.14.0-Linux-x86_64.sh --skip-license --prefix=/usr/local && rm -rf cmake-3.14.0-Linux-x86_64.sh \
-    && yum clean -y all
+RUN yum -y install gettext-devel help2man texinfo
 
 # update bison
 RUN yum -y remove bison
@@ -46,16 +24,6 @@ RUN cd bison-3.0.5 && \
     ./configure --prefix=/usr && \
     make -j$(nproc) && \
     make install
-
-
-# install epel repo
-RUN wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
-    yum install -y epel-release-latest-7.noarch.rpm && rm -rf epel-release-latest-7.noarch.rpm  \
-    && yum clean -y all
-
-# Install dev and runtime dependencies
-# Tcl 8.5
-RUN yum install -y tcl-devel tcl tk libstdc++ tk-devel 
 
 # build boost
 RUN wget https://sourceforge.net/projects/boost/files/boost/1.72.0/boost_1_72_0.tar.bz2/download && \
@@ -75,10 +43,6 @@ RUN yum remove -y swig \
     && cd .. \
     && rm -rf swig-rel-4.0.1
 
-RUN yum -y install zlib-devel
-
-
-
 # eigen required by replace, TritonMacroPlace
 RUN git clone https://gitlab.com/libeigen/eigen.git \
     && cd eigen \
@@ -93,9 +57,7 @@ RUN cd / && wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz \
     && cmake -B build . \ 
     && cmake --build build -j $(nproc) --target install
 
-    
-RUN yum install -y gettext-devel help2man texinfo \
-    && git clone https://github.com/westes/flex \
+RUN git clone https://github.com/westes/flex \
     && cd flex \
     && git checkout v2.6.4 \
     && ./autogen.sh \

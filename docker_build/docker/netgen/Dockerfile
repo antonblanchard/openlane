@@ -13,15 +13,10 @@
 # limitations under the License.
 
 # syntax = docker/dockerfile:1.0-experimental
-FROM centos:centos7 as build
-
-# Common development tools and libraries (kitchen sink approach)
-RUN yum groupinstall -y "Development Tools"
-RUN yum -y install centos-release-scl && \
-    yum -y install devtoolset-8 devtoolset-8-libatomic-devel
+FROM openlane-base-build as build
 
 # netgen dependencies
-RUN yum install -y csh wget tcl-devel tk-devel libX11-devel cairo-devel ncurses-devel
+RUN yum install -y csh libX11-devel cairo-devel ncurses-devel
 
 # git clone netgen components
 RUN git clone git://opencircuitdesign.com/netgen netgen_20122020
@@ -29,7 +24,6 @@ RUN git clone git://opencircuitdesign.com/netgen netgen_20122020
 WORKDIR netgen_20122020
 
 RUN git checkout 920c6e69283f9bef5d3aa67776b868696e438c2d
-
 
 # build
 RUN ./configure CFLAGS="-O2 -g" --prefix=/build

@@ -13,24 +13,7 @@
 # limitations under the License.
 
 # syntax = docker/dockerfile:1.0-experimental
-FROM centos:centos7 as build
-
-
-# Install Development Environment
-RUN yum groupinstall -y "Development Tools"
-RUN yum install -y wget git
-RUN yum -y install centos-release-scl && \
-    yum -y install devtoolset-8 devtoolset-8-libatomic-devel
-RUN wget https://cmake.org/files/v3.14/cmake-3.14.0-Linux-x86_64.sh && \
-    chmod +x cmake-3.14.0-Linux-x86_64.sh  && \
-    ./cmake-3.14.0-Linux-x86_64.sh --skip-license --prefix=/usr/local
-
-# centos6 doesn't set the PATH automatically for the installed gcc from dev tools
-ENV CC=/opt/rh/devtoolset-8/root/usr/bin/gcc \
-    CPP=/opt/rh/devtoolset-8/root/usr/bin/cpp \
-    CXX=/opt/rh/devtoolset-8/root/usr/bin/g++ \
-    PATH=/opt/rh/devtoolset-8/root/usr/bin:$PATH \
-    LD_LIBRARY_PATH=/opt/rh/devtoolset-8/root/usr/lib64:/opt/rh/devtoolset-8/root/usr/lib:/opt/rh/devtoolset-8/root/usr/lib64/dyninst:/opt/rh/devtoolset-8/root/usr/lib/dyninst:/opt/rh/devtoolset-8/root/usr/lib64:/opt/rh/devtoolset-8/root/usr/lib:$LD_LIBRARY_PATH
+FROM openlane-base-build AS build
 
 # update bison
 RUN yum -y remove bison
@@ -49,8 +32,6 @@ RUN yum remove -y swig \
     && cd swig-rel-3.0.12 \
     && ./autogen.sh && ./configure --prefix=/usr && make -j $(nproc) && make install 
 
-RUN yum -y install zlib-devel flex
-
 # download CUDD
 RUN wget https://www.davidkebo.com/source/cudd_versions/cudd-3.0.0.tar.gz && \
     tar -xvf cudd-3.0.0.tar.gz && \
@@ -58,8 +39,6 @@ RUN wget https://www.davidkebo.com/source/cudd_versions/cudd-3.0.0.tar.gz && \
     ./configure && \
     make && \
     make install
-
-RUN yum install -d6 -y tcl-devel tcl
 
 RUN git clone https://github.com/The-OpenROAD-Project/OpenSTA
 

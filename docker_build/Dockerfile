@@ -15,14 +15,16 @@
 # syntax = docker/dockerfile:1.0-experimental
 FROM centos:centos7 as build
 
+# Enable epel repo
+RUN yum -y --enablerepo=extras install epel-release
+
 # RUN useradd -m openlane
 # RUN usermod -aG wheel openlane
 # USER openlane
 
 # install base dependencies
 # including python 3.6
-RUN yum install -y https://repo.ius.io/ius-release-el$(rpm -E '%{rhel}').rpm && \
-	yum install -y \
+RUN yum install -y \
 		make \
 		cairo \
 		gettext \
@@ -34,9 +36,9 @@ RUN yum install -y https://repo.ius.io/ius-release-el$(rpm -E '%{rhel}').rpm && 
 		libSM \
 		libXext \
 		libXft \
-		python36u \
-		python36u-pip \
-		python36u-tkinter \
+		python3 \
+		python3-pip \
+		python3-tkinter \
 		strace \
 		tcl \
 		tcllib \
@@ -46,16 +48,15 @@ RUN yum install -y https://repo.ius.io/ius-release-el$(rpm -E '%{rhel}').rpm && 
 	yum clean all && \
 	rm -rf /var/cache/yum
 
-RUN alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 60
-
 # Install python dependencies
-RUN pip3.6 install --no-cache-dir --upgrade pip
+RUN pip3 install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir \
-		matplotlib \
 		jinja2 \
-		pandas \
 		install \
 		XlsxWriter
+# Work out why these aren't installing:
+		#matplotlib why doesnt this work
+		#pandas
 
 # for magic
 RUN yum install -y mesa-libGLU-devel
@@ -67,7 +68,6 @@ ENV OPENROADOS=Linux-x86_64
 ENV PATH=$OPENLANE_ROOT:$OPENLANE_ROOT/scripts:$OPENROAD/bin:$OPENROAD/bin/Linux-x86_64:$OPENROAD/pdn/scripts:$PATH
 ENV LD_LIBRARY_PATH=$OPENROAD/lib:$OPENROAD/lib/Linux-x86_64:$LD_LIBRARY_PATH
 ENV MANPATH=$OPENROAD/share/man:$MANPATH
-
 
 ARG CACHE_INVALIDATOR=1
 RUN echo "$CACHE_INVALIDATOR"
