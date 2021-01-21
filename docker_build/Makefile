@@ -4,6 +4,14 @@ DOCKERFILE_PATH ?= ./Dockerfile
 IMAGE_NAME ?= openlane:rc7
 #ROOT = sudo
 
+PODMAN ?= 0
+
+ifeq ($(PODMAN),0)
+DOCKER_CMD=docker
+else
+DOCKER_CMD=podman
+endif
+
 TOOLS = klayout replace opendp route cugr drcu opensta yosys antmicro_yosys magic openroad_app padring netgen vlogtoverilog openphysyn cvc
 
 TOOL_BUILD_TARGETS = $(foreach tool,$(TOOLS),build-$(tool))
@@ -16,7 +24,7 @@ build-all: $(TOOL_BUILD_TARGETS) export-all
 
 $(TOOL_BUILD_TARGETS): build-% : ./docker/%/Dockerfile
 	mkdir -p logs/docker
-	docker build $(DOCKER_BUILD_OPTS) -t $* docker/$* | tee logs/docker/$*.build.txt
+	$(DOCKER_CMD) build $(DOCKER_BUILD_OPTS) -t $* docker/$* | tee logs/docker/$*.build.txt
 	${MAKE} export-$*
 
 # ==============================================================================
@@ -26,9 +34,9 @@ $(TOOL_BUILD_TARGETS): build-% : ./docker/%/Dockerfile
 $(TOOL_EXPORT_TARGETS_PHONY): export-% :
 	rm -f tar/$*.tar.gz && echo "Deleted existing tar/$*.tar.gz"
 	mkdir -p tar
-	id=$$(${ROOT} docker create $*) ; \
-	  ${ROOT} docker cp $$id:\build.tar.gz tar/$*.tar.gz ; \
-	  ${ROOT} docker rm -v $$id
+	id=$$(${ROOT} $(DOCKER_CMD) create $*) ; \
+	  ${ROOT} $(DOCKER_CMD) cp $$id:\build.tar.gz tar/$*.tar.gz ; \
+	  ${ROOT} $(DOCKER_CMD) rm -v $$id
 
 .PHONY: export-all
 export-all: tar/openroad_tools.tar.gz
@@ -49,7 +57,7 @@ FORCE:
 .PHONY: merge
 merge: tar/openroad_tools.tar.gz tar/openLANE_flow.tar.gz
 	mkdir -p logs/docker/tar
-	docker build --build-arg CACHE_INVALIDATOR=$(shell date +%s) $(DOCKER_BUILD_OPTS) -t $(IMAGE_NAME) -f $(DOCKERFILE_PATH) ./tar | tee logs/docker/$<.build.txt ; \
+	$(DOCKER_CMD) build --build-arg CACHE_INVALIDATOR=$(shell date +%s) $(DOCKER_BUILD_OPTS) -t $(IMAGE_NAME) -f $(DOCKERFILE_PATH) ./tar | tee logs/docker/$<.build.txt ; \
 
 .PHONY: clean_merge
 clean_merge:
