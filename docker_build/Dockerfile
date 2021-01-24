@@ -42,6 +42,8 @@ RUN yum install -y https://repo.ius.io/ius-release-el$(rpm -E '%{rhel}').rpm && 
 		tcllib \
 		tk \
 		wget \
+		qt5-qtbase \
+		qt5-qtbase-gui \
 		Xvfb && \
 	yum clean all && \
 	rm -rf /var/cache/yum

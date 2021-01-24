@@ -1,0 +1,43 @@
+diff --git a/src/OpenDB/src/defout/defout_impl.cpp b/src/OpenDB/src/defout/defout_impl.cpp
+index 830b37dc..9092997a 100644
+--- a/src/OpenDB/src/defout/defout_impl.cpp
++++ b/src/OpenDB/src/defout/defout_impl.cpp
+@@ -865,7 +865,8 @@ void defout_impl::writeBTerm(dbBTerm* bterm)
+       for (itr = bpins.begin(); itr != bpins.end(); ++itr)
+         writeBPin(*itr, cnt++);
+ 
+-      fprintf(_out, " ;\n");
++      if (0)
++        fprintf(_out, " ;\n");
+ 
+       return;
+     }
+@@ -916,7 +917,7 @@ void defout_impl::writeBPin(dbBPin* bpin, int cnt)
+   std::string bname = bterm->getName();
+ 
+   
+-  if(cnt == 0 || _version <= defout::DEF_5_6){
++  if(1 || cnt == 0 || _version <= defout::DEF_5_6){
+     if (_use_net_inst_ids) {
+       if (cnt == 0)
+         fprintf(_out, "    - %s + NET N%u", bname.c_str(), net->getId());
+@@ -958,7 +959,7 @@ void defout_impl::writeBPin(dbBPin* bpin, int cnt)
+ 
+   fprintf(_out, "\n      ");
+ 
+-  if (_version > defout::DEF_5_6)
++  if (0 && _version > defout::DEF_5_6)
+     fprintf(_out, "+ PORT");
+ 
+ 
+@@ -1055,8 +1056,8 @@ void defout_impl::writeBPin(dbBPin* bpin, int cnt)
+       break;
+     }
+   } 
+-  
+-  
++  if (1)
++    fprintf(_out, " ;\n");
+ }
+ 
+ void defout_impl::writeBlockages(dbBlock* block)

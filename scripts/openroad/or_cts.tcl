@@ -27,15 +27,18 @@ if {[catch {read_def $::env(CURRENT_DEF)} errmsg]} {
 read_verilog $::env(CURRENT_NETLIST)
 read_sdc $::env(BASE_SDC_FILE)
 
+read_liberty -max $::env(LIB_SLOWEST)
+read_liberty -min $::env(LIB_FASTEST)
+
+set_wire_rc -layer $::env(WIRE_RC_LAYER)
+
 set max_slew [expr {$::env(SYNTH_MAX_TRAN) * 1e-9}]; # must convert to seconds
 set max_cap [expr {$::env(CTS_MAX_CAP) * 1e-12}]; # must convert to farad
 
 puts "\[INFO\]: Configuring cts characterization..."
 configure_cts_characterization\
     -max_slew $max_slew\
-    -max_cap $max_cap\
-    -sqr_cap $::env(CTS_SQR_CAP)\
-    -sqr_res $::env(CTS_SQR_RES)
+    -max_cap $max_cap
 
 puts "\[INFO]: Performing clock tree synthesis..."
 puts "\[INFO]: Looking for the following net(s): $::env(CLOCK_NET)"

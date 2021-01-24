@@ -1,34 +1,52 @@
+From 27a0c64e1d7dfeffa53b91440db115bd1e959e20 Mon Sep 17 00:00:00 2001
+From: Anton Blanchard <anton@linux.ibm.com>
+Date: Tue, 26 Jan 2021 11:05:40 +1100
+Subject: [PATCH] Add -diamond_search_height
+
+---
+ src/opendp/include/opendp/Opendp.h |  4 ++--
+ src/opendp/src/Opendp.cpp          |  6 ++++--
+ src/opendp/src/opendp.i            |  4 ++--
+ src/opendp/src/opendp.tcl          | 12 +++++++++---
+ 4 files changed, 17 insertions(+), 9 deletions(-)
+
 diff --git a/src/opendp/include/opendp/Opendp.h b/src/opendp/include/opendp/Opendp.h
-index 71e01bd0..b5c2dd49 100644
+index ea12a99e..e4411f60 100644
 --- a/src/opendp/include/opendp/Opendp.h
 +++ b/src/opendp/include/opendp/Opendp.h
-@@ -170,7 +170,7 @@ public:
+@@ -169,8 +169,8 @@ public:
+   void init(dbDatabase *db,
              Logger *logger);
    // legalize/report
-   // max_displacment is in rows, 0 for unconstrained
+-  // max_displacment is in rows, 0 for unconstrained
 -  void detailedPlacement(int max_displacment);
-+  void detailedPlacement(int max_displacment, int diamond_search_height=100);
++  // max_displacement is in rows, 0 for unconstrained
++  void detailedPlacement(int max_displacement, int diamond_search_height=100);
+   void reportLegalizationStats() const;
    void setPaddingGlobal(int left, int right);
    void setPadding(dbMaster *inst,
-                   int left,
 diff --git a/src/opendp/src/Opendp.cpp b/src/opendp/src/Opendp.cpp
-index 7116bb36..397db9b4 100644
+index 616e344a..b77aa861 100644
 --- a/src/opendp/src/Opendp.cpp
 +++ b/src/opendp/src/Opendp.cpp
-@@ -186,8 +186,10 @@ Opendp::havePadding() const
+@@ -186,11 +186,13 @@ Opendp::havePadding() const
  }
  
  void
 -Opendp::detailedPlacement(int max_displacment)
-+Opendp::detailedPlacement(int max_displacment, int diamond_search_height)
++Opendp::detailedPlacement(int max_displacement, int diamond_search_height)
  {
 +  diamond_search_height_ = diamond_search_height;
 +  diamond_search_width_ = diamond_search_height_ * 5;
    importDb();
    reportImportWarnings();
-   findDesignStats();
+-  max_displacement_constraint_ = max_displacment;
++  max_displacement_constraint_ = max_displacement;
+   hpwl_before_ = hpwl();
+   detailedPlacement();
+   // Save displacement stats before updating instance DB locations.
 diff --git a/src/opendp/src/opendp.i b/src/opendp/src/opendp.i
-index f47e1927..a0d15d6d 100644
+index fa03fa80..c846f3ae 100644
 --- a/src/opendp/src/opendp.i
 +++ b/src/opendp/src/opendp.i
 @@ -114,10 +114,10 @@ tclListSetdbMaster(Tcl_Obj *const source,
@@ -36,46 +54,49 @@ index f47e1927..a0d15d6d 100644
  
  void
 -detailed_placement_cmd(int max_displacment)
-+detailed_placement_cmd(int max_displacment, int diamond_search_height)
++detailed_placement_cmd(int max_displacement, int diamond_search_height)
  {
    dpl::Opendp *opendp = ord::OpenRoad::openRoad()->getOpendp();
 -  opendp->detailedPlacement(max_displacment);
-+  opendp->detailedPlacement(max_displacment,diamond_search_height);
++  opendp->detailedPlacement(max_displacement,diamond_search_height);
  }
  
- bool
+ void
 diff --git a/src/opendp/src/opendp.tcl b/src/opendp/src/opendp.tcl
-index 6145b173..2aca5836 100644
+index 2af4cfc3..a859d011 100644
 --- a/src/opendp/src/opendp.tcl
 +++ b/src/opendp/src/opendp.tcl
-@@ -33,11 +33,11 @@
+@@ -32,11 +32,11 @@
+ ## POSSIBILITY OF SUCH DAMAGE.
  #############################################################################
  
- # -constraints is an undocumented option for worthless academic contests
--sta::define_cmd_args "detailed_placement" {[-constraints constraints_file]}
-+sta::define_cmd_args "detailed_placement" {[-max_displacement max_displacement_val] [-diamond_search_height diamond_search_height_val]}
+-sta::define_cmd_args "detailed_placement" {[-max_displacement max_displacement]}
++sta::define_cmd_args "detailed_placement" {[-max_displacement max_displacement] [-diamond_search_height diamond_search_height_val]}
  
  proc detailed_placement { args } {
    sta::parse_key_args "detailed_placement" args \
--    keys {-constraints} flags {}
+-    keys {-max_displacement} flags {}
 +    keys {-max_displacement -diamond_search_height} flags {}
  
-   if { [info exists keys(-max_displacment)] } {
-     set max_displacment $keys(-max_displacment)
-@@ -45,10 +45,15 @@ proc detailed_placement { args } {
-   } else {
-     set max_displacment 0
+   if { [info exists keys(-max_displacement)] } {
+     set max_displacement $keys(-max_displacement)
+@@ -45,9 +45,15 @@ proc detailed_placement { args } {
+     set max_displacement 0
    }
+ 
 +  set diamond_search_height 100
 +  if { [info exists keys(-diamond_search_height)] } {
 +    set diamond_search_height $keys(-diamond_search_height)
 +    sta::check_positive_integer "-diamond_search_height" $diamond_search_height
 +  }
- 
++
    sta::check_argc_eq0 "detailed_placement" $args
    if { [ord::db_has_rows] } {
--    dpl::detailed_placement_cmd $max_displacment
-+    dpl::detailed_placement_cmd $max_displacment $diamond_search_height
+-    dpl::detailed_placement_cmd $max_displacement
++    dpl::detailed_placement_cmd $max_displacement $diamond_search_height
+     dpl::report_legalization_stats
    } else {
      ord::error "no rows defined in design. Use initialize_floorplan to add rows."
-   }
+-- 
+2.29.2
+
